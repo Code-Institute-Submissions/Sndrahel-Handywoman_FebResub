@@ -14,7 +14,7 @@ import os
 from pathlib import Path
 import dj_database_url
 
-if os.path.isfile("env.py"): 
+if os.path.isfile("env.py"):
     import env  # noqa
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
+    'django_summernote',
     'blog',
 ]
 
