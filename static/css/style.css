@@ -1,11 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 body {
-	font-family: 'Varela Round', sans-serif;
+	font-family: 'Poppins', sans-serif;
 }
+
+.masthead {
+    padding-top: 10.5rem;
+    padding-bottom: 6rem;
+    text-align: center;
+    color: #fff;
+    background-image: url("https://res.cloudinary.com/mindthelights/image/upload/v1630174779/handywoman_ttl7hz.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+}
+
+.masthead .masthead-subheading {
+    font-size: 1.5rem;
+    font-style: italic;
+    line-height: 1.5rem;
+    margin-bottom: 25px;
+}
+
+.masthead .masthead-heading {
+    font-size: 3.25rem;
+    font-weight: 700;
+    line-height: 3.25rem;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .masthead {
+      padding-top: 17rem;
+      padding-bottom: 12.5rem;
+    }
+    .masthead .masthead-subheading {
+      font-size: 2.25rem;
+      font-style: italic;
+      line-height: 2.25rem;
+      margin-bottom: 2rem;
+    }
+    .masthead .masthead-heading {
+      font-size: 4.5rem;
+      font-weight: 700;
+      line-height: 4.5rem;
+      margin-bottom: 4rem;
+    }
+}
+
 .form-control {
 	box-shadow: none;		
 	font-weight: normal;
 	font-size: 13px;
 }
+
 .navbar {
 	background: #fff;
 	padding-left: 16px;
