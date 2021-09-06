@@ -21,15 +21,15 @@
 
 <body>
     <!-- Collection of nav links adapted from: https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&file=navbar-dropdown-login-and-signup-form-with-social-buttons -->
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
-        <a href="{% url 'home' %}" class="navbar-brand">Handy<b>Woman</b></a>  		
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
+        <a href="{% url 'index' %}" class="navbar-brand">Handy<b>Woman</b></a>  		
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
        
         <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
             <div class="navbar-nav">
-                <a href="{% url 'home' %}" class="nav-item nav-link active">Home</a>
+                <a href="{% url 'index' %}" class="nav-item nav-link active">Home</a>
                 <a href="#" class="nav-item nav-link">Services</a>			
                 <a href="#" class="nav-item nav-link">About</a>
                 <a href="{% url 'blog' %}" class="nav-item nav-link">Blog</a>
