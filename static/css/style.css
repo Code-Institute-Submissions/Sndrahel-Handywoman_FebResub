@@ -88,14 +88,12 @@ body {
 
 #services .services-item .services-caption .services-caption-heading {
     font-size: 1.5rem;
-    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-weight: 700;
     margin-bottom: 0;
 }
 
 #services .services-item .services-caption .services-caption-subheading {
     font-style: italic;
-    font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
   
 .services-modal .modal-dialog {
@@ -117,7 +115,6 @@ body {
 .services-modal .modal-content p.item-intro {
     font-style: italic;
     margin-bottom: 2rem;
-    font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .services-modal .modal-content p {
@@ -146,6 +143,18 @@ body {
     opacity: 0.3;
 }
 
+.masthead {
+    padding-top: 10.5rem;
+    padding-bottom: 6rem;
+    text-align: center;
+    color: #fff;
+    background-image: url("https://res.cloudinary.com/mindthelights/image/upload/v1630174779/handywoman_ttl7hz.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+}
+
 @media (min-width: 768px) {
     .masthead {
       padding-top: 17rem;
@@ -158,7 +167,7 @@ body {
       margin-bottom: 2rem;
     }
     .masthead .masthead-heading {
-      font-size: 4.5rem;
+      font-size: 5.5rem;
       font-weight: 700;
       line-height: 4.5rem;
       margin-bottom: 4rem;
