@@ -254,6 +254,109 @@ body {
 		width: 100%;
 	}
 }
+
+/* Contact form */
+
+body{margin-top:20px;}
+.custom-form .form-control {
+    height: 44px;
+    font-size: 15px;
+    padding-left: 15px;
+    border-color: #e6eef6;
+    color: #828f99;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.custom-form .contact-lable {
+    position: absolute;
+    left: 27px;
+    top: 7px;
+    line-height: 20px;
+    font-weight: 500;
+    color: #828f99;
+    background: #fbfdfe;
+    margin: 0px;
+    padding: 0px 7px;
+    z-index: 1;
+}
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+}
+
+.custom-form .form-control {
+    height: 44px;
+    font-size: 15px;
+    padding-left: 15px;
+    border-color: #e6eef6;
+    color: #828f99;
+}
+textarea.form-control {
+    height: auto !important;
+}
+
+/*** Spin 2 ***/
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+  }
+}
+
+h1 {
+    margin-bottom: 40px
+}
+
+label {
+    color: #333
+}
+
+.btn-send {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    width: 80%;
+    margin-left: 3px
+}
+
+.help-block.with-errors {
+    color: #ff5050;
+    margin-top: 5px
+}
+
+.card {
+    margin-left: 10px;
+    margin-right: 10px
+}
+
+
 /* body {
     background-color: #F9FAFC;
 }
