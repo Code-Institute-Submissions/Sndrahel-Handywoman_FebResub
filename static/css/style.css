@@ -143,29 +143,20 @@ body {
     opacity: 0.3;
 }
 
-.masthead {
-    padding-top: 10.5rem;
-    padding-bottom: 6rem;
-    text-align: center;
-    color: #fff;
-    background-image: url("https://res.cloudinary.com/mindthelights/image/upload/v1630174779/handywoman_ttl7hz.jpg");
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: center center;
-    background-size: cover;
-}
 
 @media (min-width: 768px) {
     .masthead {
       padding-top: 17rem;
       padding-bottom: 12.5rem;
     }
+
     .masthead .masthead-subheading {
       font-size: 2.25rem;
       font-style: italic;
       line-height: 2.25rem;
       margin-bottom: 2rem;
     }
+
     .masthead .masthead-heading {
       font-size: 5.5rem;
       font-weight: 700;
