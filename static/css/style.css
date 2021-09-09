@@ -47,103 +47,6 @@ body {
     margin-bottom: 4rem;
 }
 
-#services .services-item {
-    max-width: 26rem;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#services .services-item .services-link {
-    position: relative;
-    display: block;
-    margin: 0 auto;
-}
-
-#services .services-item .services-link .services-hover {
-    display: flex;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 200, 0, 0.9);
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity ease-in-out 0.25s;
-}
-
-#services .services-item .services-link .services-hover .services-hover-content {
-    font-size: 1.25rem;
-    color: white;
-}
-
-#services .services-item .services-link:hover .services-hover {
-    opacity: 1;
-}
-
-#services .services-item .services-caption {
-    padding: 1.5rem;
-    text-align: center;
-    background-color: #fff;
-}
-
-#services .services-item .services-caption .services-caption-heading {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 0;
-}
-
-#services .services-item .services-caption .services-caption-subheading {
-    font-style: italic;
-}
-  
-.services-modal .modal-dialog {
-    margin: 1rem;
-    max-width: 100vw;
-}
-
-.services-modal .modal-content {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-    text-align: center;
-}
-
-.services-modal .modal-content h2, .services-modal .modal-content .h2 {
-    font-size: 3rem;
-    line-height: 3rem;
-}
-
-.services-modal .modal-content p.item-intro {
-    font-style: italic;
-    margin-bottom: 2rem;
-}
-
-.services-modal .modal-content p {
-    margin-bottom: 2rem;
-}
-
-.services-modal .modal-content ul.list-inline {
-    margin-bottom: 2rem;
-}
-
-.services-modal .modal-content img {
-    margin-bottom: 2rem;
-}
-
-.services-modal .close-modal {
-    position: absolute;
-    top: 1.5rem;
-    right: 1.5rem;
-    width: 3rem;
-    height: 3rem;
-    cursor: pointer;
-    background-color: transparent;
-}
-
-.services-modal .close-modal:hover {
-    opacity: 0.3;
-}
-
-
 @media (min-width: 768px) {
     .masthead {
       padding-top: 17rem;
@@ -221,10 +124,8 @@ body {
 .navbar .action-buttons .dropdown-toggle::after {
 	display: none;
 }
-.form-check-label input {
-	position: relative;
-	top: 1px;
-}
+
+
 @media (min-width: 1200px){
 	.form-inline .input-group {
 		width: 300px;
