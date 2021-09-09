@@ -1,9 +1,9 @@
-from .models import Comment
 from django import forms
+from .models import Post
 
 
-class CommentForm(forms.ModelForm):
+class PostForm(forms.ModelForm):
 
     class Meta:
-        model = Comment
-        fields = ('body',)
+        model = Post
+        fields = '__all__'
