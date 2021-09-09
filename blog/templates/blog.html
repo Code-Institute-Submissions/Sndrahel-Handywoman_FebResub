@@ -22,12 +22,10 @@
                         <div class="card mb-4 mt-2">
                             <!-- Blog Post Image Goes Here -->
                             <figure class="figure">
-                                {% if post.image_url %}
-                                <img src="{{ post.image_url }}" class="figure-img img-fluid rounded card-img-top"
-                                    alt="{{ post.title }}">
+                                {% if "placeholder" in post.featured_image.url %}
+                                <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" class="figure-img img-fluid rounded" alt="{{ post.title }}">
                                 {% else %}
-                                <img class="figure-img img-fluid rounded" src="{{ MEDIA_URL }}noimage.jpg"
-                                    alt="{{ post.title }}">
+                                <img class="figure-img img-fluid rounded" src="{{ post.featured_image.url }}" alt="{{ post.title }}">
                                 {% endif %}
                             </figure>
                             <!-- Blog Post Title & Blurb Go Here -->
@@ -36,14 +34,7 @@
                                 <p class="card-text text-muted h6">{{ post.author }} | {{ post.created_on}} | <i class="far fa-heart"></i> {{ post.number_of_likes }} </p>
                                 <p class="card-text">{{post.content|slice:":200" }}</p>
                                 <a href="{% url 'post_detail' post.slug  %}" class="btn btn-black">Read More &rarr;</a>
-                            </div>
-                            <!-- Only display update/delete links if user is superuser -->
-                            {% if request.user.is_superuser %}
-                            <small class="ml-4">
-                                <a href="{% url 'edit_post' post.id %}">Edit</a> |
-                                <a class="text-danger" href="{% url 'delete_post' post.id %}">Delete</a>
-                            </small>
-                            {% endif %}
+                            </div>  
                         </div>
                         {% endfor %}
                     </div>
