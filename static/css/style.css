@@ -125,6 +125,20 @@ body {
 	display: none;
 }
 
+/*---- Breadcumbs style ----*/
+
+.breadcrumb-item+.breadcrumb-item::before {
+    content: ">";
+}
+
+.breadcrumb-style {
+    background-color: #2E2E2E;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/*---- End Breadcumbs style ----*/
+
 
 @media (min-width: 1200px){
 	.form-inline .input-group {
@@ -249,9 +263,7 @@ label {
 }
 
 
-/* body {
-    background-color: #F9FAFC;
-}
+/*
 
 .brand {
     font-family: Lato, sans-serif;
