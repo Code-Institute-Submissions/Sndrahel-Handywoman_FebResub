@@ -11,7 +11,7 @@ class PostList(generic.ListView):
     template_name = 'blog.html'
 
 
-class PostDetail(generic.DetailView):
+class PostDetail(View):
 
     def get(self, request, slug, *args, **kwargs):
         queryset = Post.objects.filter(status=1)

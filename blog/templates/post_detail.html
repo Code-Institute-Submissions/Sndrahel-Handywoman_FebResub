@@ -24,15 +24,8 @@
                     <div class="card-body">
                         <h2 class="card-title">{{ post.title }}</h2>
                         <div class="row">
-                            <div class="col-sm-8">
-                                <p class="card-text text-muted h6">{{ post.author }} | {{ post.created_on}} | <i class="far fa-heart"></i> {{ post.number_of_likes }}</p>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="float-right">
-                                    {% with comments.count as total_comments %}
-                                    <strong class="text-secondary"><i class="far fa-comments"></i> {{ total_comments }}</strong>
-                                    {% endwith %}
-                                </div>
+                            <div class="col-sm-12">
+                                <p class="card-text text-muted h6">{{ post.author }} | {{ post.created_on}} | <i class="far fa-heart"></i> {{ post.number_of_likes }} | {% with comments.count as total_comments %} <strong class="text-secondary"><i class="far fa-comments"></i> {{ total_comments }}</strong>{% endwith %}</p>
                             </div>
                         </div>
                         <p class="card-text ">{{ post.content | safe }}</p>                

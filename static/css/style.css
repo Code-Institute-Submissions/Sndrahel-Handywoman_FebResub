@@ -8,51 +8,60 @@ body {
 	font-family: 'Poppins', sans-serif;
 }
 
+/* Transparent navbar adapted from: https://bootstrapious.com/p/transparent-navbar */
 .navbar {
-	padding-left: 16px;
-	padding-right: 16px;
+    transition: all 0.4s;
+    background-color: rgba(250, 244, 244, 0.4);
 }
 
-.bg-dark {
-    background: black !important;
+.navbar .nav-link {
+    color: rgb(0, 0, 0);
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: #fcb70f;
+    text-decoration: none;
 }
 
 .navbar .navbar-brand {
-	padding-left: 0;
-	font-size: 25px;
-	padding-right: 50px;
+    color: rgb(0, 0, 0);
+    font-size: 25px;
 }
 
 .navbar-brand b {
-	color: #0ab919;		
+	color: #fcb70f;		
 }
 
-.navbar a {
-	color: rgb(0, 0, 0);
-	font-size: 15px;
+/* Change navbar styling on scroll */
+.navbar.active {
+    background: rgba(8, 7, 7, 0.7);
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.navbar .sign-up-btn {
-	min-width: 100px;
-	max-height: 35px;
+.navbar.active .nav-link {
+    color: #fff;
 }
 
-.navbar a, .navbar a:active {
-	color: #888;
-	padding: 8px 20px;
-	background: transparent;
-	line-height: normal;
+.navbar.active .nav-link:hover,
+.navbar.active .nav-link:focus {
+    color: #fcb70f;
+    text-decoration: none;
 }
 
-.navbar .btn-primary, .navbar .btn-primary:active {
-	color: #fff;
-	background: #0ab919 !important;
-	border: none;
+.navbar.active .navbar-brand {
+    color: #fff;
 }
 
-.navbar .btn-primary:hover, .navbar .btn-primary:focus {		
-	color: #fff;
-	background: #31bfb1 !important;
+/* Change navbar styling on small viewports */
+@media (max-width: 991.98px) {
+    .navbar {
+        background: #fff;
+    }
+
+    .navbar .navbar-brand, .navbar .nav-link {
+        color: rgb(0, 0, 0);
+    }
 }
 
 .masthead {
@@ -118,7 +127,6 @@ body {
     margin-bottom: 4rem;
 }
 
-/* Blog */
 
 /* Blog */
 
@@ -128,20 +136,6 @@ body {
 }
 
 /* Bootstrap Message Toasts - from Code Institute */
-.message-container {
-    position: fixed;
-    top: 72px;
-    right: 15px;
-    z-index: 9999999999;
-}
-
-.custom-toast {
-    overflow: visible;
-}
-
-.toast-capper {
-    height: 2px;
-}
 
 .btn-black {
     background: black;
@@ -169,10 +163,23 @@ body {
     border: 1px solid #fcb70f;
 }
 
+.image-flash {
+    position: absolute;
+    top: 50%;
+    min-width: 30%;
+    left: -2px;
+    background-color: #fcb70f;
+}
+
+.author {
+    color: black;
+    margin: 4px;
+    text-transform: uppercase;
+}
+
 
 /* Contact form */
 
-body{margin-top:20px;}
 .custom-form .form-control {
     height: 44px;
     font-size: 15px;
@@ -269,6 +276,21 @@ label {
 .card {
     margin-left: 10px;
     margin-right: 10px
+}
+
+
+
+.btn-like {
+    color: #E84610;
+    border: none;
+    background: transparent;
+}
+
+.btn-like:hover,
+.btn-like:active {
+    color: #E84610;
+    background: transparent;
+    border: none;
 }
 
 
