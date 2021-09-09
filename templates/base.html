@@ -4,21 +4,29 @@
 <html lang="en">
 
 <head>
+    <!-- Required meta tags -->
+    {% block meta %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Handywoman</title>
+    {% endblock %}
+
+    {% block extra_meta %}
+    {% endblock %}
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <script src="https://kit.fontawesome.com/72ab4e86da.js" crossorigin="anonymous"></script>
 
+    <title>Handywoman</title>
+
 </head>
 
 <body>
     <!-- Collection of nav links adapted from: https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&file=navbar-dropdown-login-and-signup-form-with-social-buttons -->
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
         <div class="container-fluid">
             <a href="{% url 'index' %}" class="navbar-brand">Handy<b>Woman</b></a>  		
