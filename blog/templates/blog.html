@@ -33,7 +33,7 @@
                             <!-- Blog Post Title & Blurb Go Here -->
                             <div class="card-body">
                                 <h2 class="card-title">{{ post.title }}</h2>
-                                <p class="card-text text-muted h6">{{ post.author }} | {{ post.created_on}} </p>
+                                <p class="card-text text-muted h6">{{ post.author }} | {{ post.created_on}} | <i class="far fa-heart"></i> {{ post.number_of_likes }} </p>
                                 <p class="card-text">{{post.content|slice:":200" }}</p>
                                 <a href="{% url 'post_detail' post.slug  %}" class="btn btn-black">Read More &rarr;</a>
                             </div>
