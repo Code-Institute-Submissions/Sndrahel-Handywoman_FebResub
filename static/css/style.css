@@ -8,6 +8,11 @@ body {
 	font-family: 'Poppins', sans-serif;
 }
 
+.bg-dark {
+    background: black !important;
+}
+
+
 /* Transparent navbar adapted from: https://bootstrapious.com/p/transparent-navbar */
 .navbar {
     transition: all 0.4s;
@@ -26,7 +31,7 @@ body {
 
 .navbar .navbar-brand {
     color: rgb(0, 0, 0);
-    font-size: 25px;
+    font-size: 30px;
 }
 
 .navbar-brand b {
@@ -39,7 +44,7 @@ body {
 
 /* Change navbar styling on scroll */
 .navbar.active {
-    background: rgba(8, 7, 7, 0.7);
+    background: rgba(8, 7, 7, 0.8);
     box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -372,5 +377,6 @@ label {
     background: transparent;
     border: none;
 }
+
 
 
