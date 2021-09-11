@@ -8773,7 +8773,7 @@ fieldset:disabled .btn {
 
 .bg-dark {
     --bs-bg-opacity: 1;
-    background-color: black !important;
+    background-color: rgba(var(--bs-black-rgb), var(--bs-bg-opacity)) !important;
 }
 
 .bg-black {
@@ -12380,6 +12380,14 @@ fieldset:disabled .btn {
 
 /* Contact form */
 
+.bg-image-contact {
+    background-image: url('https://res.cloudinary.com/mindthelights/image/upload/v1630174760/pexels-los-muertos-crew-8447791_yyy9av.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*
 .custom-form .form-control {
     height: 44px;
     font-size: 15px;
@@ -12433,32 +12441,7 @@ label {
 textarea.form-control {
     height: auto !important;
 }
-
-/*** Spin 2 ***/
-@-webkit-keyframes spin {
-    0% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-    }
-
-    100% {
-        -webkit-transform: translateY(40px);
-        transform: translateY(40px);
-    }
-}
-
-@keyframes spin {
-    0% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-    }
-
-    100% {
-        -webkit-transform: translateY(40px);
-        transform: translateY(40px);
-    }
-}
-
+*/
 
 label {
     color: #333

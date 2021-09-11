@@ -3,129 +3,127 @@
 {% load static %}
 
 {% block content %}
-<!-- Code adapted from: https://bbbootstrap.com/snippets/simple-contact-form-74408136 and https://www.bootdey.com/snippets/view/contact-form-with-image#css -->
 <section class="page-section bg-light" id="about">
-    <div class="container">
-        <div class="text-center mt-5 ">
-            <h1 class="section-heading text-uppercase">Contact Form</h1>
-        </div>
+    <div class="text-center mt-2 ">
+        <h1 class="section-heading text-uppercase">Contact Form</h1>
+    </div>
 
-        <div class="row">
-            <div class="col mx-auto">
-                <div class="mt-4 contact-home-img text-center">
-                    <img src="https://res.cloudinary.com/mindthelights/image/upload/c_scale,w_450/v1630174760/pexels-los-muertos-crew-8447791_yyy9av.jpg"
-                        class="img-fluid" alt="">
-                </div>
-            </div>
-
-            <div class="col mx-auto">
-                <div class="custom-form mt-4">
-                    <div id="message"></div>
-                    <form method="post" action="php/contact.php" name="contact-form" id="contact-form">
-                        <div class="row">
-                            <div class="col-lg-12 mb-0 p-0">
-                                <div class="form-group">
-                                    <label for="contact-lable">Name *</label>
-                                    <input name="name" id="name" class="form-control" type="text"
-                                        placeholder="Please enter your name *" required="required"
-                                        data-error="Name is required.">
+    <div class="container-fluid px-5 my-4">
+        <div class="row justify-content-center">
+            <div class="col-xl-10">
+                <div class="card border-0 rounded-3 shadow-lg overflow-hidden">
+                    <div class="card-body p-0">
+                        <div class="row g-0">
+                            <div class="col-sm-6 d-none d-sm-block bg-image-contact"></div>
+                            <div class="col-sm-6 p-4">
+                                <div class="text-center">
+                                    <div class="h3 fw-light">Contact Form</div>
+                                    <p class="mb-4 text-muted">Split layout contact form</p>
                                 </div>
-                            </div>
-                        </div>
 
-                        <div class="row">
-                            <div class="col-lg-12 mb-0 p-0">
-                                <div class="form-group">
-                                    <label for="contact-lable">Email Address *</label>
-                                    <input name="email" id="email" class="form-control" type="text"
-                                        placeholder="Please enter your email *" required="required"
-                                        data-error="Valid email is required.">
-                                </div>
-                            </div>
-                        </div>
+                                <form method="post" action="php/contact.php" name="contactForm" id="contactForm">
 
-                        <div class="row">
-                            <div class="col-lg-12 mb-0 p-0">
-                                <div class="form-group">
-                                    <label for="contact-lable">Please specify your subject *</label>
-                                    <select id="subject" name="subject" class="form-control" required="required"
-                                        data-error="Please specify your need.">
-                                        <option value="" selected disabled>--Select Subject--</option>
-                                        <option>Request information</option>
-                                        <option>Request a qoutation </option>
-                                        <option>Request feedback</option>
-                                        <option>Other</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
+                                    <!-- Name Input -->
+                                    <div class="form-group mb-3">
+                                        <label for="contact-lable">Name *</label>
+                                        <input name="name" id="name" class="form-control" type="text"
+                                            placeholder="Please enter your name *" required="required"
+                                            data-error="Name is required.">
+                                    </div>
 
-                        <div class="row">
-                            <div class="col-lg-12 mb-3 p-0">
-                                <div class="form-group">
-                                    <div class="form-check">
-                                        <label for="form_check">Service Selection</label>
+                                    <!-- Email Input -->
+                                    <div class="form-group mb-3">
+                                        <label for="contact-lable">Email Address *</label>
+                                        <input name="email" id="email" class="form-control" type="text"
+                                            placeholder="Please enter your email *" required="required"
+                                            data-error="Valid email is required.">
+                                    </div>
+
+                                    <!-- Request Input -->
+                                    <div class="form-group mb-3">
+                                        <label for="contact-lable">Please specify your subject *</label>
+                                        <select id="subject" name="subject" class="form-control" required="required"
+                                            data-error="Please specify your need.">
+                                            <option value="" selected disabled>--Select Subject--</option>
+                                            <option>Request information</option>
+                                            <option>Request a qoutation </option>
+                                            <option>Request feedback</option>
+                                            <option>Other</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Selection Input -->
+                                    <div class="form-group mb-3">
                                         <div class="form-check">
-                                            <input type="checkbox" class="form-check-input" name="handyService"
-                                                id="id_handyService_1" value="Construction">
-                                            <label class="form-check-label" for="id_handyService_1">Construction /
-                                                Renovation</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input type="checkbox" class="form-check-input" name="handyService"
-                                                id="id_handyService_2" value="Gardening">
-                                            <label class="form-check-label" for="id_handyService_2">Gardening</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input type="checkbox" class="form-check-input" name="handyService"
-                                                id="id_handyService_3" value="Transport">
-                                            <label class="form-check-label" for="id_handyService_3">Moving /
-                                                Transport</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input type="checkbox" class="form-check-input" name="handyService"
-                                                id="id_handyService_4" value="Webb">
-                                            <label class="form-check-label" for="id_handyService_4">Webb / IT /
-                                                Design</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input type="checkbox" class="form-check-input" name="handyService"
-                                                id="id_handyService_5" value="Economics">
-                                            <label class="form-check-label" for="id_handyService_5">Economics /
-                                                Law</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input type="checkbox" class="form-check-input" name="handyService"
-                                                id="id_handyService_6" value="Others">
-                                            <label class="form-check-label" for="id_handyService_6">Others</label>
+                                            <label for="form_check">Service Selection</label>
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" name="handyService"
+                                                    id="id_handyService_1" value="Construction">
+                                                <label class="form-check-label" for="id_handyService_1">Construction
+                                                    /
+                                                    Renovation</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" name="handyService"
+                                                    id="id_handyService_2" value="Gardening">
+                                                <label class="form-check-label"
+                                                    for="id_handyService_2">Gardening</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" name="handyService"
+                                                    id="id_handyService_3" value="Transport">
+                                                <label class="form-check-label" for="id_handyService_3">Moving /
+                                                    Transport</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" name="handyService"
+                                                    id="id_handyService_4" value="Webb">
+                                                <label class="form-check-label" for="id_handyService_4">Webb / IT /
+                                                    Design</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" name="handyService"
+                                                    id="id_handyService_5" value="Economics">
+                                                <label class="form-check-label" for="id_handyService_5">Economics /
+                                                    Law</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" name="handyService"
+                                                    id="id_handyService_6" value="Others">
+                                                <label class="form-check-label" for="id_handyService_6">Others</label>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+
+                                    <!-- Message Input -->
+                                    <div class="form-group mb-3">
+                                        <label for="form_message">Message *</label>
+                                        <textarea name="message" id="form_message"
+                                            placeholder="Write your message here." rows="5" class="form-control"
+                                            required="required" data-error="Please, leave us a message."></textarea>
+                                    </div>
+
+                                    <!-- Submit error message -->
+                                    <div class="d-none" id="submitErrorMessage">
+                                        <div class="text-center text-danger mb-3">Error sending message!</div>
+                                    </div>
+
+                                    <!-- Submit button -->
+                                    <div class="d-grid">
+                                        <button class="btn btn-primary btn-lg disabled" id="submitButton"
+                                            type="submit">Send Message</button>
+                                    </div>
+                                </form>
+                                <!-- End of contact form -->
+
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-lg-12 mb-0 p-0">
-                                <div class="form-group">
-                                    <label for="form_message">Message *</label>
-                                    <textarea name="message" id="form_message" placeholder="Write your message here."
-                                        rows="5" class="form-control" required="required"
-                                        data-error="Please, leave us a message."></textarea>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <input id="submit" name="send" class="btn btn-success btn-send pt-2 btn-block"
-                                    value="Send Message" type="submit">
-                                <div id="simple-msg"></div>
-                            </div>
-                        </div>
-                    </form>
+
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
 
 {%endblock%}
