@@ -12244,249 +12244,17 @@ fieldset:disabled .btn {
     background-size: cover;
 }
 
-/* Blog */
+/* Services section */
 
-.blog-masthead-text {
-    background-color: #445261;
-    color: white;
-    position: relative;
-}
-
-.blog-masthead-image {
-    position: relative;
-    overflow: hidden;
-}
-
-.blog-masthead-image:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 90%;
-    height: 100%;
-    width: 150%;
-    background: black;
-    -webkit-transform: skew(15deg);
-    -moz-transform: skew(15deg);
-    transform: skew(15deg);
-    z-index: 100;
-}
-
-.post-link {
-    text-decoration: none;
-    color: #445261;
-}
-
-.post-link:hover,
-.page-link {
-    color: #E84610;
-}
-
-.post-title {
-    margin-top: 20%;
-    margin-left: 5%;
-}
-
-.post-subtitle {
-    margin-left: 5%;
-    color: lightgray;
-}
-
-.btn-signup {
-    background-color: #23BBBB;
-    color: #fff;
-}
-
-.btn-signup:hover,
-.btn-signup:active {
+#construction-card,
+#mechanics-card,
+#logistic-card,
+#law-card,
+#webb-card,
+#other-card {
     background-color: #fff;
-    color: #23BBBB;
-}
-
-.link {
-    color: #23BBBB;
-    text-decoration: none;
-}
-
-.link:hover,
-.link:active {
-    color: #445261;
-    text-decoration: underline;
-}
-
-.btn-like {
-    color: #E84610;
-    border: none;
-    background: transparent;
-}
-
-.btn-like:hover,
-.btn-like:active {
-    color: #E84610;
-    background: transparent;
-    border: none;
-}
-
-
-.btn-black {
-    background: black;
-    color: white;
-    margin-top: 15px;
-}
-
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
-    background: #fcb70f;
-    color: #fff;
-}
-
-.btn-outline-black {
-    background: white;
-    color: black !important;
-    border: 1px solid black;
-}
-
-.btn-outline-black:hover,
-.btn-outline-black:active,
-.btn-outline-black:focus {
-    background: white;
-    color: #fcb70f !important;
-    border: 1px solid #fcb70f;
-}
-
-.card {
-    border: none;
-    background-color: transparent;
-}
-
-.image-container {
-    position: relative;
-}
-
-.image-flash {
-    position: absolute;
-    top: 50%;
-    min-width: 30%;
-    left: -2px;
-    background-color: #fcb70f;
-}
-
-.author {
-    color: black;
-    margin: 4px;
-    text-transform: uppercase;
-}
-
-
-/* Contact form */
-
-.bg-image-contact {
-    background-image: url('https://res.cloudinary.com/mindthelights/image/upload/v1630174760/pexels-los-muertos-crew-8447791_yyy9av.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-/*
-.custom-form .form-control {
-    height: 44px;
-    font-size: 15px;
-    padding-left: 15px;
-    border-color: #e6eef6;
-    color: #828f99;
-}
-
-.form-control {
-    display: block;
-    width: 100%;
-    height: calc(1.5em + .75rem + 2px);
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #495057;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: .25rem;
-    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-}
-
-.custom-form .contact-lable {
-    position: absolute;
-    left: 27px;
-    top: 7px;
-    line-height: 20px;
-    font-weight: 500;
-    color: #828f99;
-    background: #fbfdfe;
-    margin: 0px;
-    padding: 0px 7px;
-    z-index: 1;
-}
-
-label {
-    display: inline-block;
-    margin-bottom: .5rem;
-}
-
-.custom-form .form-control {
-    height: 44px;
-    font-size: 15px;
-    padding-left: 15px;
-    border-color: #e6eef6;
-    color: #828f99;
-}
-
-textarea.form-control {
-    height: auto !important;
-}
-*/
-
-label {
-    color: #333
-}
-
-.btn-send {
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    width: 80%;
-    margin-left: 3px
-}
-
-.help-block.with-errors {
-    color: #ff5050;
-    margin-top: 5px
-}
-
-.btn-like {
-    color: #E84610;
-    border: none;
-    background: transparent;
-}
-
-.btn-like:hover,
-.btn-like:active {
-    color: #E84610;
-    background: transparent;
-    border: none;
-}
-
-.page-section {
-    padding: 6rem 0;
-}
-
-.page-section .section-heading, .page-section .section-heading.h2 {
-    font-size: 2.5rem;
-    margin-top: 0;
-    margin-bottom: 1rem;
-}
-  
-.page-section .section-subheading, .page-section .section-subheading.h3 {
-    font-size: 1rem;
-    font-weight: 400;
-    margin-bottom: 4rem;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
 }
 
 /* Blog */
@@ -12562,30 +12330,28 @@ label {
     border: none;
 }
 
-.btn-black {
-    background: black;
-    color: white;
-}
+/* Blog */
 
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
-    background: #fcb70f;
+.btn-signup {
+    background-color: #23BBBB;
     color: #fff;
 }
 
-.btn-outline-black {
-    background: white;
-    color: black !important;
-    border: 1px solid black;
+.btn-signup:hover,
+.btn-signup:active {
+    background-color: #fff;
+    color: #23BBBB;
 }
 
-.btn-outline-black:hover,
-.btn-outline-black:active,
-.btn-outline-black:focus {
-    background: white;
-    color: #fcb70f !important;
-    border: 1px solid #fcb70f;
+.link {
+    color: #23BBBB;
+    text-decoration: none;
+}
+
+.link:hover,
+.link:active {
+    color: #445261;
+    text-decoration: underline;
 }
 
 .card {
@@ -12611,100 +12377,6 @@ label {
     text-transform: uppercase;
 }
 
-
-/* Contact form */
-
-.custom-form .form-control {
-    height: 44px;
-    font-size: 15px;
-    padding-left: 15px;
-    border-color: #e6eef6;
-    color: #828f99;
-}
-.form-control {
-    display: block;
-    width: 100%;
-    height: calc(1.5em + .75rem + 2px);
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #495057;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: .25rem;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
-.custom-form .contact-lable {
-    position: absolute;
-    left: 27px;
-    top: 7px;
-    line-height: 20px;
-    font-weight: 500;
-    color: #828f99;
-    background: #fbfdfe;
-    margin: 0px;
-    padding: 0px 7px;
-    z-index: 1;
-}
-label {
-    display: inline-block;
-    margin-bottom: .5rem;
-}
-
-.custom-form .form-control {
-    height: 44px;
-    font-size: 15px;
-    padding-left: 15px;
-    border-color: #e6eef6;
-    color: #828f99;
-}
-textarea.form-control {
-    height: auto !important;
-}
-
-/*** Spin 2 ***/
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  100% {
-    -webkit-transform: translateY(40px);
-            transform: translateY(40px);
-  }
-}
-@keyframes spin {
-  0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  100% {
-    -webkit-transform: translateY(40px);
-            transform: translateY(40px);
-  }
-}
-
-
-label {
-    color: #333
-}
-
-.btn-send {
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    width: 80%;
-    margin-left: 3px;
-    margin-top: 15px;
-}
-
-.help-block.with-errors {
-    color: #ff5050;
-    margin-top: 5px
-}
-
 .btn-like {
     color: #E84610;
     border: none;
@@ -12718,6 +12390,59 @@ label {
     border: none;
 }
 
-/* testamonials */
+/* Contact form */
 
+.bg-image-contact {
+    background-image: url('https://res.cloudinary.com/mindthelights/image/upload/v1630174760/pexels-los-muertos-crew-8447791_yyy9av.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.page-section {
+    padding: 6rem 0;
+}
+
+/* Page section */
+
+.page-section .section-heading, .page-section .section-heading.h2 {
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+  
+.page-section .section-subheading, .page-section .section-subheading.h3 {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 4rem;
+}
+
+/* Buttons */
+
+.btn-black {
+    background: black;
+    color: white;
+    margin-top: 1rem;
+}
+
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #fcb70f;
+    color: #fff;
+}
+
+.btn-outline-black {
+    background: white;
+    color: black !important;
+    border: 1px solid black;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: white;
+    color: #fcb70f !important;
+    border: 1px solid #fcb70f;
+}
 
