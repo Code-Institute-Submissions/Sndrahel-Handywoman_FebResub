@@ -1,16 +1,17 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.core.mail import send_mail
+from django.conf import settings
 from .forms import ContactForm
 
 
 # Create your views here.
 def contact(request):
-    contact_qoute_form = ContactForm()
+    contact_form = ContactForm()
 
     if request.method == "POST":
-        contact_qoute_form = ContactForm(request.POST)
-        if contact_qoute_form.is_valid():
+        contact_form = ContactForm(request.POST)
+        if contact_form.is_valid():
             name = request.POST["name"]
             email = request.POST["email"]
             subject = request.POST["subject"]
@@ -44,4 +45,4 @@ def contact(request):
             )
             return redirect("contact")
 
-    return render(request, "contact.html", {"form": contact_qoute_form})
+    return render(request, "contact.html", {"form": contact_form})
