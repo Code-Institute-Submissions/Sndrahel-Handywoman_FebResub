@@ -23,9 +23,11 @@
                             <!-- Blog Post Image Goes Here -->
                             <figure class="figure">
                                 {% if "placeholder" in post.featured_image.url %}
-                                <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" class="figure-img img-fluid rounded" alt="{{ post.title }}">
+                                <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg"
+                                    class="figure-img img-fluid rounded" alt="{{ post.title }}">
                                 {% else %}
-                                <img class="figure-img img-fluid rounded" src="{{ post.featured_image.url }}" alt="{{ post.title }}">
+                                <img class="figure-img img-fluid rounded" src="{{ post.featured_image.url }}"
+                                    alt="{{ post.title }}">
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="author">Author: {{ post.author }}</p>
@@ -36,12 +38,16 @@
                                 <h2 class="card-title">{{ post.title }}</h2>
                                 <div class="row">
                                     <div class="col-sm-12">
-                                        <p class="card-text text-muted h6">{{ post.created_on}} | <i class="far fa-heart"></i> {{ post.number_of_likes }} | {% with comments.count as total_comments %} <strong class="text-secondary"><i class="far fa-comments"></i> {{ total_comments }}</strong>{% endwith %}</p>
+                                        <p class="card-text text-muted h6">{{ post.created_on}} | <i
+                                                class="far fa-heart"></i> {{ post.number_of_likes }} |
+                                            {% with comments.count as total_comments %} <strong
+                                                class="text-secondary"><i class="far fa-comments"></i>
+                                                {{ total_comments }}</strong>{% endwith %}</p>
                                     </div>
                                 </div>
                                 <p class="card-text">{{post.content|slice:":200" }}</p>
                                 <a href="{% url 'post_detail' post.slug  %}" class="btn btn-black">Read More &rarr;</a>
-                            </div>  
+                            </div>
                         </div>
                         {% endfor %}
                     </div>
@@ -49,7 +55,7 @@
                     <div class="col-md-4 float-right ">
                         <div class="card my-4">
                             <h5 class="card-header" id="blog_post_header">Hey There, Welcome!</h5>
-                            <div class="card-body">
+                            <div class="card-body" id="blog_post_widget">
                                 <p class="card-text">Every month we ask our fabulous guest authors to post new blog
                                     posts about all things new & old in the art world. Sometimes we'll go back into time
                                     & reveal excerpts from the lives of one of our featured artists,

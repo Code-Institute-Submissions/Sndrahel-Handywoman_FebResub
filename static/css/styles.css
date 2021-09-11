@@ -182,7 +182,7 @@ h6,
 }
 
 p {
-    margin-top: 0;
+    margin-top: 1rem;
     margin-bottom: 1rem;
 }
 
@@ -12536,45 +12536,31 @@ label {
     color: lightgray;
 }
 
+#blog_post_header {
+    color: #f8f9fa;
+    background-color: #000;
+}
+
+#blog_post_widget {
+    border: 1px solid black;
+}
+
 .comment-notification {
     color: red !important;
 }
 
-.btn-signup {
-    background-color: #23BBBB;
-    color: #fff;
-}
-
-.btn-signup:hover,
-.btn-signup:active {
-    background-color: #fff;
-    color: #23BBBB;
-}
-
-.link {
-    color: #23BBBB;
-    text-decoration: none;
-}
-
-.link:hover,
-.link:active {
-    color: #445261;
-    text-decoration: underline;
-}
-
-.btn-like {
+.btn-likes {
     color: #E84610;
     border: none;
     background: transparent;
 }
 
-.btn-like:hover,
-.btn-like:active {
+.btn-likes:hover,
+.btn-likes:active {
     color: #E84610;
     background: transparent;
     border: none;
 }
-
 
 .btn-black {
     background: black;
