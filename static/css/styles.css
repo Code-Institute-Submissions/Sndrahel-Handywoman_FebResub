@@ -12536,6 +12536,10 @@ label {
     color: lightgray;
 }
 
+.comment-notification {
+    color: red !important;
+}
+
 .btn-signup {
     background-color: #23BBBB;
     color: #fff;
