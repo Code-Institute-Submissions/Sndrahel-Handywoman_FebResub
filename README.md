@@ -44,10 +44,10 @@ A MVP (minimum viable product) includes:
 
 - landing page..
 - services page..
-- blog page..
 - about page..
-- login and register pages..
+- blog page..
 - contact page
+- login and register pages
 
 ### User Stories
 
@@ -78,6 +78,8 @@ Website contains:
 
 ### Wireframes
 
+The website is created as a desktop-first because it is easy to picture the whole image of the website, however, it is a fully mobile responsive website as well so users using a mobile phone have no difficulties toggeling the site. Below are the wireframes of the core pages of the website.
+
 - [Wireframes]()
 
 ### Database Schema
@@ -100,11 +102,19 @@ Database schema contains:
 All pages have the sidebar with the logo with links and footer.
 
 
-### Register a new user
+### Navbar
 
-![Register]()
+![Navbar]()
 
-When accessing the registration screen, the user must to fill in his/her first name, last name, email and choose a username and password for the platform.
+After logging into the system, the user can access the profile screen via the MY ACCOUNT button on the sidebar.
+There are three buttons, one that takes you to the page to change the profile, one to reset the password, and other to return to the main page.
+
+
+### Sign up a new user
+
+![Sign up]()
+
+When accessing the sign up screen, the user must choose a username, password and fill in a email for access to the commenting on the blog-platform.
 
 When a character is correctly guessed, the user will get feedback that correct character has been picked. The correct character will be added to the current team as well to a line were all "used characters" is shown.
 
@@ -113,45 +123,14 @@ When a character is correctly guessed, the user will get feedback that correct c
 
 ![Login]()
 
-On the login screen, the user is asked to fill in his/her login and password for access. If the user does not remember the password, he/she can request a password reset at the FORGOT PASSWORD link. A link to access the registration page is provided immediately below if the user does not already have it.
+On the login screen, the user is asked to fill in his/her login and password for access. If the user does not remember the password, he/she can request a password reset at the FORGOT PASSWORD link. A link to access the registration page is provided above if the user does not already have it.
 
-
-### User Profile
-
-![Profile]()
-
-After logging into the system, the user can access the profile screen via the MY ACCOUNT button on the sidebar.
-There are three buttons, one that takes you to the page to change the profile, one to reset the password, and other to return to the main page.
-
-
-#### Edit Profile
-
-![Edit Profile]()
-
-It is possible to change the user's first name, last name and email acessing the edit profile screen. Three buttons are available on this page: one to return to the main page, one to save changes and the last one to delete the user account. ** It will only be possible to delete the user if he/she does not have an active subscription plan.
-
-
-#### Password Reset
-
-![Password Reset]()
-
-On the password reset page, the user's registration email will be requested so that an email with the password reset link will be sent
-
-
-#### Delete Account
-
-![Delete Account]()
-
-When clicking on the button to delete the account, a message is displayed alerting the user that this action will be permanent and cannot be undone. If the user wishes to continue, the account will be deleted. A button is also displayed to return to the profile page.
 
 ### Services Selection
 
 ![Services]()
 
-
-### Blog Page
-
-![Blog]()
+This is where the users can read more detailed information about services that offers. The services card displays a button from where the users will have a direct access to the contact/request page.
 
 
 ### About Us
@@ -159,11 +138,16 @@ When clicking on the button to delete the account, a message is displayed alerti
 ![About Us]()
 
 
+### Blog Page
+
+![Blog]()
+
+
 ### Contact Page
 
 ![Contact]()
 
-On the contact page, a form is available for the user to send messages to the admin of the site containing the fields Name, email, subject and message. 
+On the contact page, a form is available for the user to send messages to the admin of the site containing the fields Name, email, subject, service sellection and message. 
 
 
 ## Features Left to Implement:
@@ -174,16 +158,25 @@ On the contact page, a form is available for the user to send messages to the ad
 ----
 # Technologies Used:
 
-## Languages:
-- [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) - To create a basic site.
-
-## Framework libraries and programs:
-- [Affinity Designer](https://affinity.serif.com/en-gb/) - For creating wireframes for initial visual development.
-- [Lucidchart](https://www.lucidchart.com) - Used to create flowchart.
-- [GitHub](https://pages.github.com/) - Used to host respository.
-- [GitPod](https://gitpod.io/) - Used to develop project.
-- [GitHub Pages](https://sndrahel.github.io/Hangman/) - Used to deploy this site.
-- [Am I responsive](http://ami.responsivedesign.is/#) - Was used to generate a mockup for this readme.
+## Languages, framework libraries and programs:
+- [HTML5](https://en.wikipedia.org/wiki/HTML) - For markup
+- [CSS3](https://en.wikipedia.org/wiki/CSS) - For style
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript) - For interaction
+- [Python3](https://www.python.org/) - As a backend programming language
+- [Django](https://www.djangoproject.com/) - As the main framework of Python
+- [SQLite](https://www.sqlite.org/index.html) - As a database in development mode
+- [PostgreSQL](https://landing.aiven.io/en/aiven-for-postgresql/) - As a database in production mode
+- [Startbootstrap](https://startbootstrap.com/) - For the mainframe of the website
+- [Getbootstrap](https://getbootstrap.com/) - For containers and layout
+- [MDBootstrap](https://mdbootstrap.com/) - For card snippets
+- [Cloudinary](https://cloudinary.com/) - For storage of media and images
+- [Google Fonts](https://fonts.google.com/) - For fonts
+- [Font Awesome](https://fontawesome.com/) - For icons
+- [Gitpod](https://www.gitpod.io/) - As Integrated Development Environment (IDE)
+- [Git](https://git-scm.com/) - For local version control, keeping the files & documents
+- [GitHub](https://github.com/) - For online version control and keeping the files & documents
+- [Heroku](https://www.heroku.com/) - For deploying the website
+- [Balsamiq](https://balsamiq.com/) - For wireframes
 
 ---  
 # Testing:
@@ -194,15 +187,17 @@ On the contact page, a form is available for the user to send messages to the ad
 - 
 
 ## Validator Testing:
-- [PEP8 Online](http://pep8online.com/) - Check your code for PEP8 requirements. = 
+- [W3C Markup Validation Service](https://validator.w3.org/) - For testing HTML code
+- [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) - For testing CSS code
+- [PEP8 Online](http://pep8online.com/) - For checking Python PEP8 requirements. 
+- [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) - For testing, style checking and debugging
 
 ### This project was tested with the following browsers: 
 - Laptop MacOS Big Sur (ver 11.4): Google Chrome
 
 ### The following steps were taken:
 - 
-- 
--  
+-
 - 
 - 
 -  
@@ -220,16 +215,22 @@ On the contact page, a form is available for the user to send messages to the ad
 ---
 # Deployment
 
--
--
--
+## Setting up
+---
+The website of this project requires back-end technologies such as server, application, and database so the website is deployed in [Heroku](https://www.heroku.com/), which is a cloud platform with a service supporting several programming languages, because GitHub can only host a static website. Heroku Postgres is used for the database, which is also a cloud-based platform, is used to store static files and images as Heroku has [no files system to store new files
 
 
 ## Setting up Heroku App
 ---
--
--
--
+- Create an app in Heroku. Click *New*, put App name and select region.
+- Add Heroku Postgres for the database.
+- Install `gunicorn`, `dj_database_url` and `psycopg2-binary` to use Heroku Postgres, and run `pip3 freeze > requirements.txt` command to add them on requirments.txt.
+- Update `settings.py` of the app. Import `dj_database_url`, comment out sqlite databases and add dj databases variable temporary while the database is transferred to Heroku Postgres.
+- Run `python3 manage.py showmigrations` command to see the status of migrations (Currently not migrated). Run `python3 manage.py migrate` command to migrate.
+- Create a super user with `python3 manage.py createsuperuser` command for product admin.
+- Create a **Procfile** which specifies the commands that are executed by the app on startup.
+- Temporary disable collectstatic by setting `heroku config:set DISABLE_COLLECTSTATIC = 1` and host name of Heroku to allowed hosts in `settings.py`.
+- Generate a new secret key, set it up in Heroku and update `settings.py`. Change the setting of Debug mode that only True in Development mode.
 
 
 ## Deployment through Heroku
@@ -247,7 +248,7 @@ On the contact page, a form is available for the user to send messages to the ad
 ## How to Fork the respository
 ---
 - Log into GitHub.
-- In Github go to ().
+- In Github go to (https://github.com/Sndrahel/Handywoman.git).
 - In the top right hand corner click "Fork".
 - A copy of the repository will then be added to your repositories page.
 
@@ -266,11 +267,13 @@ On the contact page, a form is available for the user to send messages to the ad
 # Credits
 
 ## Content:
-- [Youtube]() - The code inspired and taken from this tutorial.  
-- [GitHub]() - Inspiraton of the score system are taken from this site.
+- [Code Institute](https://codeinstitute.net/) - Inspiration of blog layout were taken from tutorial.
+- [Youtube](https://www.youtube.com/results?search_query=python+django+dentist+website+%237) - Tutorial used for setting up sending email .  
+- [Startbootstrap](https://startbootstrap.com/) - Core template and contacform taken from this site.
 - [Stack Overflow](https://stackoverflow.com/) - Was used to find solutions and debugging.
-- [Wikipedia](https://www.wikipedia.org/) - .
-- [GitHub]() - Inspiration of structure for this README file were adapted from this site. 
+- [GitHub](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf) - Inspiration of structure for this README file were adapted from this site. 
+- [GitHub](https://github.com/rodrigoneumann/photographer-ms4) - Inspiration of structure and contactforms were adapted from this site. 
+- [GitHub](https://github.com/ZahraSadiq/Milestone4-PosterBay) - Inspiration of layout for main site were adapted from this site.
  
 
 ## Acknowledgments:
