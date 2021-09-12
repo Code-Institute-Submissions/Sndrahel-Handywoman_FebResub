@@ -6,7 +6,6 @@
 
 <section class="page-section bg-light" id="blog">
     <div class="container">
-        <!-- To hide the background image -->
         <div class="overlay"></div>
         <div class="container-fluid">
             <div class="row">
@@ -16,7 +15,7 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <!-- Blog Entries Column -->
+                    <!-- Blog layout below adapted from: https://github.com/ZahraSadiq/Milestone4-PosterBay -->
                     <div class="col-md-8 mt-3 left">
                         {% for post in post_list %}
                         <div class="card mb-4 mt-2">
@@ -51,17 +50,16 @@
                         </div>
                         {% endfor %}
                     </div>
-                    <!-- Sidebar Widgets Column from Building a Blog App with Django tutorial -->
+                    <!-- Sidebar Widgets Column tutorial -->
                     <div class="col-md-4 float-right ">
                         <div class="card my-4">
                             <h5 class="card-header" id="blog_post_header">Hey There, Welcome!</h5>
                             <div class="card-body" id="blog_post_widget">
-                                <p class="card-text">Every month we ask our fabulous guest authors to post new blog
-                                    posts about all things new & old in the art world. Sometimes we'll go back into time
+                                <p class="card-text">Every week we a guest expert will post a new blog
+                                    posts about all things new & old. Sometimes we'll go back into time
                                     & reveal excerpts from the lives of one of our featured artists,
                                     while other times catching you up on what's hot & trending. You can find it all
-                                    here! <br> <br>So make sure to come back next month to see what's new & in store for
-                                    you!!
+                                    here! <br> <br>So make sure to come back soon again to see what's up!!
                                 </p>
                             </div>
                         </div>

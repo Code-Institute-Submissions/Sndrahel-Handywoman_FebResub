@@ -2,17 +2,17 @@
 
 ## Full Stack Frameworks with Django
 
-![Responsive Mockup]()  
+![Responsive Mockup](media/mockup.png)  
 
 ---
 
 ## Project Summary
 
-Handywoman is a website that provides....
+Handywoman is a site that connect handy women with other handy womens. The site contains a blog page where news, interesting articles, tips and handy trick can be read and commented on. The site also provides a contact form where users can request help / services from handy women.  
 
 This project is my milstone project 4 for Code Institute and is for educational purposes only.
 
-Feel Free to visit the live website: [Handywoman]() 
+Feel Free to visit the live website: [Handywoman](https://handywoman.herokuapp.com/) 
 
 ---
 # Table of contents
@@ -35,19 +35,22 @@ Feel Free to visit the live website: [Handywoman]()
 
 ## Strategy
 
-The purpose of this project is to build..
-This website can be easily changed for different type of businesses.
+The purpose of this project is to build a site where women connect and exchange knowledge and services
 
 ## Scope
 
-A MVP (minimum viable product) includes:
+Based on the requirements of achieving user's and owner's goals and stories, below is the list of required pages with the features and functions:
 
-- landing page..
-- services page..
-- about page..
-- blog page..
-- contact page
-- login and register pages
+- Simple design landing page that the purpose of the website is obvious to anybody and even first-time users know how to navigate the website. 
+- Services page where users can view all the services the site provides.
+- Blog page where user can read and comment on the latest post / news.
+- About page where users can get information about the site and what it provides.
+- Contact page where users can contact the admin of the site or to send a quotation,
+- Checkout success page where users get confirmation of purchase
+- Login / register page where users can log in or register.
+- Logout function that users can safely log out the website and takes users back to the home page.
+- Blog page management (admin only) where admin can add, edit, approve and delete content.
+
 
 ### User Stories
 
@@ -57,21 +60,27 @@ A MVP (minimum viable product) includes:
 2 | Site User | easily navigate through the website | understand what this website provide
 3 | Site User | view a list of services | select one to that suits
 4 | Site User | view services details | see description and ask for a qoute
-5 | Site User | register an account | comment and share experience
-6 | Site User | contact the aministrator of the site | get more information
-7 | Administrator | have access to all the functionalities available as a simple user | controll the site and its content
-8 | Administrator | add new content | keep the site up to date
-9 | Administrator | verify registration for new account | prevent bots and fake account
-10 | Administrator | create, read, update and delete content | manage my site content
-11 | Administrator | approve or disapprove comments| filter out objectionable comments
+5 | Site User | read blog post about news and tips 
+6 | Site User | register an account | comment and share experience
+7 | Site User | contact the aministrator of the site | get more information
+8 | Site User | get a quotation for service
+9 | Administrator | have access to all the functionalities available as a simple user | controll the site and its content
+10 | Administrator | add new content | keep the site up to date
+11 | Administrator | create, read, update and delete content | manage my site content
+12 | Administrator | approve or disapprove comments| filter out objectionable comments
 
 
 ## Structures of the website
 
 Website contains:
-- fixed navigation bar or burger icon on mobile devices with essential links to navigate on the website.
-- 
--
+- Navigation bar is fixed and collapse to burger icon on mobile devices with essential links to navigate on the website.
+- The home page first view will be simple in structure with a short text intro. 
+- Below it will contain some information about services and a about snippet with a testimonial carousel. 
+- The services page will contain information of what the services can be requested.
+- The blog page contain a smaller blog where users can read articles and logged in user can comment.
+- The about page will contain information of what the site provides and some information about the site ethos.
+- The contact page / request is a clean and simple contact.
+- The footer will contains social media links.
 
 
 ## Skeleton
@@ -80,14 +89,22 @@ Website contains:
 
 The website is created as a desktop-first because it is easy to picture the whole image of the website, however, it is a fully mobile responsive website as well so users using a mobile phone have no difficulties toggeling the site. Below are the wireframes of the core pages of the website.
 
-- [Wireframes]()
-
-### Database Schema
-
-Database schema contains:
+- [Desktop](media/wireframe_desktop.png)
+- [Tablet](media/wireframe_tablets.png)
+- [Mobile](media/wireframe_mobile.png)
 
 
 ## Surface
+
+### Design
+
+A custom CSS file, placed within the static folder of Handywoman, was used in conjunction with Bootstrap, which serves as the main CSS library. The site is built in dark mode and where I changed the dark theme to basic black. The fonts used are from fontawsome and is built in css file. 
+
+### Media 
+Pictures used in this site are taken from:
+- [Freepik](https://freepik.com/)
+- [Pexels](https://www.pexels.com/)
+- [Unsplash](https://unsplash.com/)
 
 
 ---
@@ -97,63 +114,69 @@ Database schema contains:
 
 ### Base
 
-![Landing Page]()
+![Landing Page](media/landing_page.png)
 
-All pages have the sidebar with the logo with links and footer.
-
+The landing page contains two background image with diffrent styles and some text and call to action buttons. 
 
 ### Navbar
 
-![Navbar]()
+![Navbar](media/navbar.png)
 
-After logging into the system, the user can access the profile screen via the MY ACCOUNT button on the sidebar.
-There are three buttons, one that takes you to the page to change the profile, one to reset the password, and other to return to the main page.
-
-
-### Sign up a new user
-
-![Sign up]()
-
-When accessing the sign up screen, the user must choose a username, password and fill in a email for access to the commenting on the blog-platform.
-
-When a character is correctly guessed, the user will get feedback that correct character has been picked. The correct character will be added to the current team as well to a line were all "used characters" is shown.
-
-
-### User Login
-
-![Login]()
-
-On the login screen, the user is asked to fill in his/her login and password for access. If the user does not remember the password, he/she can request a password reset at the FORGOT PASSWORD link. A link to access the registration page is provided above if the user does not already have it.
+The navigation bar at the top of each page of the website enables the user to easily access all pages of the website. On smaller devices, the navbar transforms into a burger menu, where links are only visible in a dropdown menu.
 
 
 ### Services Selection
 
-![Services]()
+![Services](media/service_page.png)
 
 This is where the users can read more detailed information about services that offers. The services card displays a button from where the users will have a direct access to the contact/request page.
 
 
 ### About Us
 
-![About Us]()
+![About Us](media/about_page.png)
+
+This is where the users can read more detailed information about what the site is about and who the persons behind it are. 
 
 
 ### Blog Page
 
-![Blog]()
+![Blog](media/blog_page.png)
+
+The blog page displays an overview of all published blog posts for readers to scroll through. It also has a sidebar panel with a welcome message to users to tell them more about the blog and how often to come back for new blog posts. Logged in users can also comment on posted articles. Before comments are posted on the site they have to be approved by the admin. 
 
 
 ### Contact Page
 
-![Contact]()
+![Contact](media/contact_page.png)
 
-On the contact page, a form is available for the user to send messages to the admin of the site containing the fields Name, email, subject, service sellection and message. 
+On the contact page, a form is available for the user to send messages to the admin of the site or to send a request for service. The form contain the fields Name, email, subject, service sellection and message. 
+
+
+### Sign up a new user
+
+![Sign up](media/signup_page.png)
+
+When accessing the sign up screen, the user must choose a username, password and fill in a email for access to the commenting on the blog-platform.
+
+
+### User Login
+
+![Login](media/signin_page.png)
+
+On the login screen, the user is asked to fill in his/her login and password for access. 
+
+### Blog Management
+
+The blog management are only accessible to the admin of the website. The admin must approve comments before they are posted. The admin can edit, delete, and add blog posts. 
 
 
 ## Features Left to Implement:
-- 
--
--
+
+- Register as a supplier/business for advertisment and to receive quotations.  
+- Payment options (for supplier) different typ off packages.
+- Search option for user so they can search directly after a Pro.
+- A chat function were logged in users directly can ask questions.
 
 ----
 # Technologies Used:
@@ -177,14 +200,10 @@ On the contact page, a form is available for the user to send messages to the ad
 - [GitHub](https://github.com/) - For online version control and keeping the files & documents
 - [Heroku](https://www.heroku.com/) - For deploying the website
 - [Balsamiq](https://balsamiq.com/) - For wireframes
+- [Am I responsive](http://ami.responsivedesign.is/) - For mockup
 
 ---  
 # Testing:
-
-## Manual Testing:
-- 
-- 
-- 
 
 ## Validator Testing:
 - [W3C Markup Validation Service](https://validator.w3.org/) - For testing HTML code
@@ -192,24 +211,32 @@ On the contact page, a form is available for the user to send messages to the ad
 - [PEP8 Online](http://pep8online.com/) - For checking Python PEP8 requirements. 
 - [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) - For testing, style checking and debugging
 
+
 ### This project was tested with the following browsers: 
 - Laptop MacOS Big Sur (ver 11.4): Google Chrome
 
-### The following steps were taken:
-- 
--
-- 
-- 
--  
-- 
 
+### The following steps were taken:
+
+- Manually testing via Devtools 
+- Non-logged in user attempting to access content (refused)
+- All buttons and links tested
+- Users availing of the like button
+- Image uploads tested - large, incorrect format etc. 
+- Form tested with correct and incorrect detail 
+- Clear user experience & navigation
+- Picture loading speed
+- Login/register/logout functionalities
+- Edit, add, delete items & posts functionalities
+- bugs or disabled links
 
 ### Issues / Unfixed Bugs:
 
-- 
-- 
-- 
-
+- Like button not working properly with hovering as well as counting likes - not fixed 
+- Testimonial carousell indicators doesnt float within the testimonial card on smaller devices - not fixed
+- When running CSS validator there is alot of warnings depending on the full bootstrap theme choosen.
+- I had issues with making the contact post - fixed.
+- All through I had many issues to make it work as I planned for in the beginning. The main reason for that depends on that I choosed to go with a template instead of doing it all by my self from scratch. I discoverd during the way that it took me much more time to try to change the prewritten scripts then it would have done if I just started from scratch. Al though it has been a good experience with alot of lessons.
 
 
 ---
@@ -266,10 +293,10 @@ The website of this project requires back-end technologies such as server, appli
 ---
 # Credits
 
-## Content:
+## Code:
 - [Code Institute](https://codeinstitute.net/) - Inspiration of blog layout were taken from tutorial.
 - [Youtube](https://www.youtube.com/results?search_query=python+django+dentist+website+%237) - Tutorial used for setting up sending email .  
-- [Startbootstrap](https://startbootstrap.com/) - Core template and contacform taken from this site.
+- [Startbootstrap](https://startbootstrap.com/) - Core template layout contact form taken from this site.
 - [Stack Overflow](https://stackoverflow.com/) - Was used to find solutions and debugging.
 - [GitHub](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf) - Inspiration of structure for this README file were adapted from this site. 
 - [GitHub](https://github.com/rodrigoneumann/photographer-ms4) - Inspiration of structure and contactforms were adapted from this site. 

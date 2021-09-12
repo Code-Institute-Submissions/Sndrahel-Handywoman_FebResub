@@ -5,7 +5,7 @@ from django.conf import settings
 from .forms import ContactForm
 
 
-# Create your views here.
+# Code below adapted from: https://github.com/rodrigoneumann/photographer-ms4
 def contact(request):
     contact_form = ContactForm()
 
