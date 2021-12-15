@@ -22,4 +22,5 @@ class ContactForm(forms.Form):
         choices=HANDY_SERVICES,
         label="Service Selection",
     )
-    message = forms.CharField(required=True, widget=forms.Textarea(attrs={"rows": 4}))
+    message = forms.CharField(
+        required=True, widget=forms.Textarea(attrs={"rows": 4}))
