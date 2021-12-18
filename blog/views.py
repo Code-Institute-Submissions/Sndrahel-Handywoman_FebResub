@@ -1,8 +1,11 @@
 from django.shortcuts import render, reverse, get_object_or_404
+from django.db.models import Q
 from django.views import generic, View
 from django.http import HttpResponseRedirect
-from .models import Post
-from .forms import CommentForm
+from django.contrib import messages
+from .models import Post, Comment
+from .forms import CommentForm, BlogForm
+from django.contrib.auth.decorators import login_required
 
 
 # code below adapted from Code Institute blog tutorial
