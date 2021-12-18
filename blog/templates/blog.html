@@ -38,10 +38,11 @@
                                 <div class="row">
                                     <div class="col-sm-12">
                                         <p class="card-text text-muted h6">{{ post.created_on}} | <i
-                                                class="far fa-heart"></i> {{ post.number_of_likes }} |
-                                            {% with comments.count as total_comments %} <strong
-                                                class="text-secondary"><i class="far fa-comments"></i>
-                                                {{ total_comments }}</strong>{% endwith %}</p>
+                                                class="far fa-heart"></i> {{ post.like_count }} |
+                                                {% with comments.count as total_comments %}
+                                                <strong class="text-secondary"><i class="far fa-comments"></i>
+                                                    {{ total_comments }}</strong>
+                                                {% endwith %}</p>
                                     </div>
                                 </div>
                                 <p class="card-text">{{post.content|slice:":200" }}</p>
