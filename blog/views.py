@@ -79,3 +79,33 @@ class PostLike(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+
+@login_required
+def add_blog(request):
+
+    if not request.user.is_superuser:
+        messages.info(request, 'Only admin can do that')
+        return redirect(reverse('home'))
+
+    if request.method == 'POST':
+        blog_form = BlogForm(request.POST, request.FILES)
+        if blog_form.is_valid():
+            new_blog = blog_form.save(commit=False)
+            new_blog.author = request.user
+            new_blog.save()
+            messages.success(request, 'New blog added')
+            return redirect(reverse('blog'))
+        else:
+            messages.error(request, 'Error posting blog')
+            return redirect(reverse('blog'))
+    else:
+        blog_form = BlogForm()
+
+    template = 'blog/add_blog.html'
+
+    context = {
+        'blog_form': blog_form,
+    }
+
+    return render(request, template, context)
