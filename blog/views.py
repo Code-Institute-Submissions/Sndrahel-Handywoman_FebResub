@@ -1,4 +1,4 @@
-from django.shortcuts import render, reverse, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.db.models import Q
 from django.views import generic, View
 from django.http import HttpResponseRedirect
@@ -91,7 +91,7 @@ def add_post(request):
     else:
         blog_form = BlogForm()
 
-    template = 'blog/add_post.html'
+    template = 'add_post.html'
 
     context = {
         'blog_form': blog_form,
@@ -125,7 +125,7 @@ def edit_post(request, blog_id):
     else:
         blog_form = BlogForm(instance=post)
 
-    template = 'blog/edit_post.html'
+    template = 'edit_post.html'
 
     context = {
         'post': post,
