@@ -18,7 +18,7 @@ class Post(models.Model):
     created_on = models.DateTimeField(auto_now=True)
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(
-        User, related_name='blogpost_like', blank=True)
+        User, related_name='like', blank=True)
     like_count = models.IntegerField(default=0)
 
     # Sort posts in descending order

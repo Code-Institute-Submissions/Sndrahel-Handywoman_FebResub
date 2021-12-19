@@ -18,6 +18,7 @@
                     <!-- Blog layout below adapted from: https://github.com/ZahraSadiq/Milestone4-PosterBay -->
                     <div class="col-md-8 mt-3 left">
                         {% for post in post_list %}
+                        <a href="{% url 'post_detail' post.id %}"></a>
                         <div class="card mb-4 mt-2">
                             <!-- Blog Post Image Goes Here -->
                             <figure class="figure">

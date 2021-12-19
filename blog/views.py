@@ -68,32 +68,21 @@ class PostDetail(View):
             },
         )
 
-
-class PostLike(View):
-
-    def post(self, request, slug, *args, **kwargs):
-        post = get_object_or_404(Post, slug=slug)
-        if post.likes.filter(id=request.user.id).exists():
-            post.likes.remove(request.user)
-        else:
-            post.likes.add(request.user)
-
-        return HttpResponseRedirect(reverse('post_detail', args=[slug]))
-
+# Code below adapted from: https://github.com/jjpickering10/CI-MS4-DragonEggWoodturning/blob/main/blog/views.py
 
 @login_required
 def add_post(request):
 
     if not request.user.is_superuser:
         messages.info(request, 'Only admin can do that')
-        return redirect(reverse('home'))
+        return redirect(reverse('blog'))
 
     if request.method == 'POST':
         blog_form = BlogForm(request.POST, request.FILES)
         if blog_form.is_valid():
-            new_blog = blog_form.save(commit=False)
-            new_blog.author = request.user
-            new_blog.save()
+            new_post = blog_form.save(commit=False)
+            new_post.author = request.user
+            new_post.save()
             messages.success(request, 'New post added')
             return redirect(reverse('blog'))
         else:
@@ -116,11 +105,11 @@ def edit_post(request, blog_id):
 
     if not Post.objects.filter(id=blog_id).exists():
         messages.info(request, 'Doesnt exist')
-        return redirect(reverse('home'))
+        return redirect(reverse('blog'))
 
     if not request.user.is_superuser:
         messages.info(request, 'Only admin can do that')
-        return redirect(reverse('home'))
+        return redirect(reverse('blog'))
 
     post = Post.objects.get(id=blog_id)
 
@@ -129,10 +118,10 @@ def edit_post(request, blog_id):
         if edited_post.is_valid():
             edited_post.save()
             messages.success(request, f'Blog post {post.title} edited')
-            return redirect(reverse('blog_post', args=[post.id]))
+            return redirect(reverse('post_detail', args=[post.id]))
         else:
             messages.error(request, f'Error editing post {post.title}')
-            return redirect(reverse('blog_post', args=[post.id]))
+            return redirect(reverse('post_detail', args=[post.id]))
     else:
         blog_form = BlogForm(instance=post)
 
@@ -151,14 +140,39 @@ def delete_post(request, blog_id):
 
     if not Post.objects.filter(id=blog_id).exists():
         messages.info(request, 'Doesnt exist')
-        return redirect(reverse('home'))
+        return redirect(reverse('blog'))
 
     if not request.user.is_superuser:
         messages.info(request, 'Only admin can do that')
-        return redirect(reverse('home'))
+        return redirect(reverse('blog'))
 
     post = Post.objects.get(id=blog_id)
     post.delete()
     messages.success(request, f'Blog post {post.title} deleted')
 
     return redirect(reverse('blog'))
+
+
+def like_post(request, blog_id):
+
+    if not Post.objects.filter(id=blog_id).exists():
+        messages.info(request, 'Doesnt exist')
+        return redirect(reverse('blog'))
+
+    if not request.user.is_authenticated:
+        messages.info(request, 'Only registered users can like a post')
+        return redirect(reverse('post_detail', args=[blog_id]))
+
+    post = Post.objects.get(id=blog_id)
+    if post.likes.filter(id=request.user.id).exists():
+        post.likes.remove(request.user)
+        post.like_count -= 1
+        post.save()
+        messages.success(request, f'You unliked {post.title}')
+    else:
+        post.likes.add(request.user)
+        post.like_count += 1
+        post.save()
+        messages.success(request, f'You liked {post.title}')
+
+    return redirect(reverse('post_detail', args=[blog_id]))
