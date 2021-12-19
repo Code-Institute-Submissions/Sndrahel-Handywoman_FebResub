@@ -3,9 +3,9 @@ from django.db.models import Q
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from .models import Post, Comment
 from .forms import CommentForm, BlogForm
-from django.contrib.auth.decorators import login_required
 
 
 # code below adapted from Code Institute blog tutorial
@@ -82,7 +82,7 @@ class PostLike(View):
 
 
 @login_required
-def add_blog(request):
+def add_post(request):
 
     if not request.user.is_superuser:
         messages.info(request, 'Only admin can do that')
@@ -94,18 +94,71 @@ def add_blog(request):
             new_blog = blog_form.save(commit=False)
             new_blog.author = request.user
             new_blog.save()
-            messages.success(request, 'New blog added')
+            messages.success(request, 'New post added')
             return redirect(reverse('blog'))
         else:
-            messages.error(request, 'Error posting blog')
+            messages.error(request, 'Error posting to blog')
             return redirect(reverse('blog'))
     else:
         blog_form = BlogForm()
 
-    template = 'blog/add_blog.html'
+    template = 'blog/add_post.html'
 
     context = {
         'blog_form': blog_form,
     }
 
     return render(request, template, context)
+
+
+@login_required
+def edit_post(request, blog_id):
+
+    if not Post.objects.filter(id=blog_id).exists():
+        messages.info(request, 'Doesnt exist')
+        return redirect(reverse('home'))
+
+    if not request.user.is_superuser:
+        messages.info(request, 'Only admin can do that')
+        return redirect(reverse('home'))
+
+    post = Post.objects.get(id=blog_id)
+
+    if request.method == 'POST':
+        edited_post = BlogForm(request.POST, instance=post)
+        if edited_post.is_valid():
+            edited_post.save()
+            messages.success(request, f'Blog post {post.title} edited')
+            return redirect(reverse('blog_post', args=[post.id]))
+        else:
+            messages.error(request, f'Error editing post {post.title}')
+            return redirect(reverse('blog_post', args=[post.id]))
+    else:
+        blog_form = BlogForm(instance=post)
+
+    template = 'blog/edit_post.html'
+
+    context = {
+        'post': post,
+        'blog_form': blog_form
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def delete_post(request, blog_id):
+
+    if not Post.objects.filter(id=blog_id).exists():
+        messages.info(request, 'Doesnt exist')
+        return redirect(reverse('home'))
+
+    if not request.user.is_superuser:
+        messages.info(request, 'Only admin can do that')
+        return redirect(reverse('home'))
+
+    post = Post.objects.get(id=blog_id)
+    post.delete()
+    messages.success(request, f'Blog post {post.title} deleted')
+
+    return redirect(reverse('blog'))

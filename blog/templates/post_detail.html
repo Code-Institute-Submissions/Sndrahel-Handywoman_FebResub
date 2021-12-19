@@ -58,6 +58,22 @@
                             {% endwith %}
                         </div>
                     </div>
+                    {% if request.user.is_superuser %}
+                        <small class="ml-3 text-center">
+                            <a href="{% url 'edit_post' post.id %}">Edit</a> | 
+                            <a class="modal-trigger" href="#post-{{ post.id }}">Delete</a>
+                            <div id="post-{{ post.id }}" class="modal">
+                                <div class="modal-content">
+                                    <p>{{ post.title }}</p>
+                                    <p>Are you sure you want to delete?</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="#!" class="modal-close global-button">Cancel</a>
+                                    <a href="{% url 'delete_post' post.id %}" class="global-button">Delete <i class="fas fa-trash"></i></a>
+                                </div>
+                            </div>
+                        </small>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -74,7 +90,7 @@
                     {% for comment in comments %}
                     <div class="comments" style="padding: 10px;">
                         <p class="font-weight-bold">
-                            <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
+                            <!-- The commenter's name goes here. -->
                             {{ comment.user }}
                             <span class=" text-muted font-weight-normal">
                                 {{ comment.created_on }}
