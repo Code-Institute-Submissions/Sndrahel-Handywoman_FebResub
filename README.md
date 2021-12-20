@@ -22,6 +22,7 @@ Feel Free to visit the live website: [Handywoman](https://handywoman.herokuapp.c
     - [Scope](#scope)
         - [User stories](#user-stories)
     - [Structure of the website](#structure-of-the-website)
+        - [Database schema](#database-schema)
     - [Skeleton](#skeleton)
     - [Surface](#surface)
 - [Features](#features)
