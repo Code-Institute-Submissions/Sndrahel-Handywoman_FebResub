@@ -68,7 +68,9 @@ class PostDetail(View):
             },
         )
 
-# Code below adapted from: https://github.com/jjpickering10/CI-MS4-DragonEggWoodturning/blob/main/blog/views.py
+# Code below adapted from: 
+# https://github.com/jjpickering10/CI-MS4-DragonEggWoodturning/blob/main/blog/views.py
+
 
 @login_required
 def add_post(request):
