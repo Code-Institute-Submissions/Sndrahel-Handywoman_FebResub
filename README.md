@@ -37,6 +37,8 @@ Feel Free to visit the live website: [Handywoman](https://handywoman.herokuapp.c
 
 The purpose of this project is to build a site where women connect and exchange knowledge and services
 
+<br>
+
 ## Scope
 
 Based on the requirements of achieving user's and owner's goals and stories, below is the list of required pages with the features and functions:
@@ -60,17 +62,75 @@ Based on the requirements of achieving user's and owner's goals and stories, bel
 2 | Site User | easily navigate through the website | understand what this website provide
 3 | Site User | view a list of services | select one to that suits
 4 | Site User | view services details | see description and ask for a qoute
-5 | Site User | read blog post about news and tips 
-6 | Site User | register an account | comment and share experience
-7 | Site User | contact the aministrator of the site | get more information
-8 | Site User | get a quotation for service
-9 | Administrator | have access to all the functionalities available as a simple user | controll the site and its content
-10 | Administrator | add new content | keep the site up to date
-11 | Administrator | create, read, update and delete content | manage my site content
-12 | Administrator | approve or disapprove comments| filter out objectionable comments
+5 | Site User | read blog post about news and tips | get new ideas and get inspired
+6 | Site User | like and comment on posts | share experience and be part of the community
+7 | Site User | register an account | comment and share experience
+8 | Site User | contact the aministrator of the site | get more information
+9 | Site User | get a quotation for service | get information about costs or other information
+10 | Administrator | have access to all the functionalities available as a simple user | controll the site and its content
+11 | Administrator | add new content | keep the site up to date
+12 | Administrator | create, read, update and delete content | manage my site content
+13 | Administrator | approve or disapprove comments| filter out objectionable comments
 
+<br>
 
 ## Structures of the website
+
+### Database Schema
+
+PostgreSQL was used when deployed through Heroku. The Data Model below was created using [app-mockup](https://app-mockup.com/).
+
+- [Database Schema](media/database_schema.png)
+
+### Blog App
+
+<br>
+
+#### Post Model
+
+| Name            | Database Key   | Field Type          | Validation                                                                   |
+| --------------- | -------------- | --------------------| -----------------------------------------------------------------------------|
+| Title           | title          | CharField           | max_length=200, unique=True,                                                 | 
+| Slug            | slug           | SlugField           | max_length=200, unique=True,                                                 |
+| Author          | author         | ForeignKey          | User, on_delete=models.CASCADE,related_name='blog_posts'                     |
+| Featured Image  | featured_image | ImageField          | CloudinaryField('image', default='placeholder')                              |
+| Exerpt          | exerpt.        | TextField.          | blank=True,                                                                  |
+| Updated On      | updated_on     | DateTimeField       | auto_now=True,                                                               |
+| Content         | content        | TextField           |                                                                              |
+| Created On      | created_on     | DateTimeField       | auto_now_add=True,                                                           |
+| Status          | status         | IntegerField        | choices=STATUS, default=0                                                    |
+| Likes           | likes          | ManyToManyField     | User, related_name='like', blank=True                                        |
+| Like Count      | like_count     | IntegerField        | default=0                                                                    |
+
+<br>
+
+#### Comment Model
+
+| Name            | Database Key   | Field Type          | Validation                                                                   |
+| --------------- | -------------- | --------------------| -----------------------------------------------------------------------------|
+| Post            | post           | ForeignKey          | Post, on_delete=models.CASCADE,related_name="comments"                       |
+| User            | user           | CharField           | max_length=80                                                                |
+| Body            | body           | TextField           |                                                                              |
+| Created On      | created_on     | DateTimeField       | auto_now_add=True,                                                           |
+| Approved        | approved       | BooleanField        | default=False                                                                |
+
+<br>
+
+### Contact App
+
+<br>
+
+#### Contact Model
+
+| Name            | Database Key   | Field Type          | Validation                                                                   |
+| --------------- | -------------- | --------------------| -----------------------------------------------------------------------------|
+| Name            | name           | CharField           | required=True, max_length=90                                                 | 
+| Email           | email          | EmailField          | required=True                                                                |
+| Subject         | subject        | CharField           | required=True, max_length=40                                                 |
+| Handy Service   | handyService   | MultipleChoiceField | required=True,widget=forms.CheckboxSelectMultiple,choices=HANDY_SERVICES,    |
+| Message         | message        | CharField           | required=True, widget=forms.Textarea(attrs={"rows":4))                       |
+
+<br>
 
 Website contains:
 - Navigation bar is fixed and collapse to burger icon on mobile devices with essential links to navigate on the website.
@@ -82,6 +142,7 @@ Website contains:
 - The contact page / request is a clean and simple contact.
 - The footer will contains social media links.
 
+<br>
 
 ## Skeleton
 
@@ -93,12 +154,15 @@ The website is created as a desktop-first because it is easy to picture the whol
 - [Tablet](media/wireframe_tablets.png)
 - [Mobile](media/wireframe_mobile.png)
 
+<br> 
 
 ## Surface
 
 ### Design
 
 A custom CSS file, placed within the static folder of Handywoman, was used in conjunction with Bootstrap, which serves as the main CSS library. The site is built in dark mode and where I changed the dark theme to basic black. The fonts used are from fontawsome and is built in css file. 
+
+<br>
 
 ### Media 
 Pictures used in this site are taken from:
@@ -112,11 +176,15 @@ Pictures used in this site are taken from:
 
 ## Existing Features:
 
+<br>
+
 ### Base
 
 ![Landing Page](media/landing_page.png)
 
 The landing page contains two background image with diffrent styles and some text and call to action buttons. 
+
+<br>
 
 ### Navbar
 
@@ -124,6 +192,7 @@ The landing page contains two background image with diffrent styles and some tex
 
 The navigation bar at the top of each page of the website enables the user to easily access all pages of the website. On smaller devices, the navbar transforms into a burger menu, where links are only visible in a dropdown menu.
 
+<br>
 
 ### Services Selection
 
@@ -131,6 +200,7 @@ The navigation bar at the top of each page of the website enables the user to ea
 
 This is where the users can read more detailed information about services that offers. The services card displays a button from where the users will have a direct access to the contact/request page.
 
+<br>
 
 ### About Us
 
@@ -138,6 +208,7 @@ This is where the users can read more detailed information about services that o
 
 This is where the users can read more detailed information about what the site is about and who the persons behind it are. 
 
+<br>
 
 ### Blog Page
 
@@ -145,6 +216,7 @@ This is where the users can read more detailed information about what the site i
 
 The blog page displays an overview of all published blog posts for readers to scroll through. It also has a sidebar panel with a welcome message to users to tell them more about the blog and how often to come back for new blog posts. Logged in users can also comment on posted articles. Before comments are posted on the site they have to be approved by the admin. 
 
+<br>
 
 ### Contact Page
 
@@ -152,6 +224,7 @@ The blog page displays an overview of all published blog posts for readers to sc
 
 On the contact page, a form is available for the user to send messages to the admin of the site or to send a request for service. The form contain the fields Name, email, subject, service sellection and message. 
 
+<br>
 
 ### Sign up a new user
 
@@ -159,6 +232,7 @@ On the contact page, a form is available for the user to send messages to the ad
 
 When accessing the sign up screen, the user must choose a username, password and fill in a email for access to the commenting on the blog-platform.
 
+<br>
 
 ### User Login
 
@@ -166,10 +240,13 @@ When accessing the sign up screen, the user must choose a username, password and
 
 On the login screen, the user is asked to fill in his/her login and password for access. 
 
+<br>
+
 ### Blog Management
 
 The blog management are only accessible to the admin of the website. The admin must approve comments before they are posted. The admin can edit, delete, and add blog posts. 
 
+<br>
 
 ## Features Left to Implement:
 
@@ -177,6 +254,8 @@ The blog management are only accessible to the admin of the website. The admin m
 - Payment options (for supplier) different typ off packages.
 - Search option for user so they can search directly after a Pro.
 - A chat function were logged in users directly can ask questions.
+
+<br>
 
 ----
 # Technologies Used:
@@ -211,10 +290,13 @@ The blog management are only accessible to the admin of the website. The admin m
 - [PEP8 Online](http://pep8online.com/) - For checking Python PEP8 requirements. 
 - [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) - For testing, style checking and debugging
 
+<br>
+
 
 ### This project was tested with the following browsers: 
 - Laptop MacOS Big Sur (ver 11.4): Google Chrome
 
+<br>
 
 ### The following steps were taken:
 
@@ -229,6 +311,8 @@ The blog management are only accessible to the admin of the website. The admin m
 - Login/register/logout functionalities
 - Edit, add, delete items & posts functionalities
 - bugs or disabled links
+
+<br>
 
 ### Issues / Unfixed Bugs:
 
@@ -246,6 +330,7 @@ The blog management are only accessible to the admin of the website. The admin m
 ---
 The website of this project requires back-end technologies such as server, application, and database so the website is deployed in [Heroku](https://www.heroku.com/), which is a cloud platform with a service supporting several programming languages, because GitHub can only host a static website. Heroku Postgres is used for the database, which is also a cloud-based platform, is used to store static files and images as Heroku has [no files system to store new files
 
+<br>
 
 ## Setting up Heroku App
 ---
@@ -259,6 +344,7 @@ The website of this project requires back-end technologies such as server, appli
 - Temporary disable collectstatic by setting `heroku config:set DISABLE_COLLECTSTATIC = 1` and host name of Heroku to allowed hosts in `settings.py`.
 - Generate a new secret key, set it up in Heroku and update `settings.py`. Change the setting of Debug mode that only True in Development mode.
 
+<br>
 
 ## Deployment through Heroku
 ---
@@ -271,6 +357,7 @@ The website of this project requires back-end technologies such as server, appli
 - Manual Deployment: This will only prompt Heroku to build your app when you manually tell it to do so.
 - Ensure the correct branch is selected "master/Main", and select a deployment method. For this project I chose Manual Deployment.
 
+<br>
 
 ## How to Fork the respository
 ---
@@ -278,6 +365,8 @@ The website of this project requires back-end technologies such as server, appli
 - In Github go to (https://github.com/Sndrahel/Handywoman.git).
 - In the top right hand corner click "Fork".
 - A copy of the repository will then be added to your repositories page.
+
+<br>
 
 ## How to clone the repository
 ---
@@ -302,6 +391,7 @@ The website of this project requires back-end technologies such as server, appli
 - [GitHub](https://github.com/rodrigoneumann/photographer-ms4) - Inspiration of structure and contactforms were adapted from this site. 
 - [GitHub](https://github.com/ZahraSadiq/Milestone4-PosterBay) - Inspiration of layout for main site were adapted from this site.
  
+<br>
 
 ## Acknowledgments:
 
