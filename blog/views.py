@@ -1,10 +1,8 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
-from django.db.models import Q
 from django.views import generic, View
-from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from .models import Post, Comment
+from .models import Post
 from .forms import CommentForm, BlogForm
 
 
@@ -68,7 +66,7 @@ class PostDetail(View):
             },
         )
 
-# Code below adapted from: 
+# Code below adapted from:
 # https://github.com/jjpickering10/CI-MS4-DragonEggWoodturning/blob/main/blog/views.py
 
 

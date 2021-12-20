@@ -34,8 +34,8 @@
                     <div class="row">
                         <div class="col-1">
                             <strong>
-                                {% if user.is_autheticated %}
-                                <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
+                                {% if request.user.is_autheticated %}
+                                <form class="d-inline" action="{% url 'like_post' post.slug %}" method="POST">
                                     {% csrf_token %}
                                     {% if liked %}
                                     <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-likes"><i
