@@ -17,7 +17,7 @@ class PostDetail(View):
 
     def get(self, request, blog_id, *args, **kwargs):
         queryset = Post.objects.filter(status=1)
-        post = Post.objects.get(queryset, id=blog_id)
+        post = Post.objects.get(id=blog_id)
         comments = post.comments.filter(approved=True).order_by("-created_on")
         liked = False
         if post.likes.filter(id=self.request.user.id).exists():
@@ -38,7 +38,7 @@ class PostDetail(View):
     def post(self, request, blog_id, *args, **kwargs):
 
         queryset = Post.objects.filter(status=1)
-        post = Post.objects.get(queryset, id=blog_id)
+        post = Post.objects.get(id=blog_id)
         comments = post.comments.filter(approved=True).order_by("-created_on")
         liked = False
         if post.likes.filter(id=self.request.user.id).exists():

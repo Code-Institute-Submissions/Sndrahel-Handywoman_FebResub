@@ -92,7 +92,6 @@ PostgreSQL was used when deployed through Heroku. The Data Model below was creat
 | Name            | Database Key   | Field Type          | Validation                                                                   |
 | --------------- | -------------- | --------------------| -----------------------------------------------------------------------------|
 | Title           | title          | CharField           | max_length=200, unique=True,                                                 | 
-| Slug            | slug           | SlugField           | max_length=200, unique=True,                                                 |
 | Author          | author         | ForeignKey          | User, on_delete=models.CASCADE,related_name='blog_posts'                     |
 | Featured Image  | featured_image | ImageField          | CloudinaryField('image', default='placeholder')                              |
 | Exerpt          | exerpt.        | TextField.          | blank=True,                                                                  |
