@@ -47,7 +47,7 @@
                                     </div>
                                 </div>
                                 <p class="card-text">{{post.content|slice:":200" }}</p>
-                                <a href="{% url 'post_detail' post.slug  %}" class="btn btn-black">Read More &rarr;</a>
+                                <a href="{% url 'post_detail' post.id  %}" class="btn btn-black">Read More &rarr;</a>
                             </div>
                             <!-- Only display update/delete links if user is superuser -->
                             {% if request.user.is_superuser %}

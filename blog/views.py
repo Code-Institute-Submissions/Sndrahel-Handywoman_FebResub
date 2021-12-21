@@ -15,9 +15,9 @@ class PostList(generic.ListView):
 
 class PostDetail(View):
 
-    def get(self, request, slug, *args, **kwargs):
+    def get(self, request, blog_id, *args, **kwargs):
         queryset = Post.objects.filter(status=1)
-        post = get_object_or_404(queryset, slug=slug)
+        post = Post.objects.get(queryset, id=blog_id)
         comments = post.comments.filter(approved=True).order_by("-created_on")
         liked = False
         if post.likes.filter(id=self.request.user.id).exists():
@@ -31,14 +31,14 @@ class PostDetail(View):
                 "comments": comments,
                 "commented": False,
                 "liked": liked,
-                "comment_form": CommentForm()
+                "comment_form": CommentForm(),
             },
         )
 
-    def post(self, request, slug, *args, **kwargs):
+    def post(self, request, blog_id, *args, **kwargs):
 
         queryset = Post.objects.filter(status=1)
-        post = get_object_or_404(queryset, slug=slug)
+        post = Post.objects.get(queryset, id=blog_id)
         comments = post.comments.filter(approved=True).order_by("-created_on")
         liked = False
         if post.likes.filter(id=self.request.user.id).exists():
@@ -114,7 +114,7 @@ def edit_post(request, blog_id):
     post = Post.objects.get(id=blog_id)
 
     if request.method == 'POST':
-        edited_post = BlogForm(request.POST, instance=post)
+        edited_post = BlogForm(request.POST, request.FILES, instance=post)
         if edited_post.is_valid():
             edited_post.save()
             messages.success(request, f'Blog post {post.title} edited')

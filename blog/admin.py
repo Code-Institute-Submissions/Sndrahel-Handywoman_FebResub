@@ -6,10 +6,10 @@ from .models import Post, Comment
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
 
-    list_display = ('title', 'slug', 'status', 'created_on')
+    list_display = ('title', 'status', 'created_on')
     list_filter = ('status', 'created_on')
     search_fields = ['title', 'content']
-    prepopulated_fields = {'slug': ('title',)}
+    prepopulated_fields = {'id': ('title',)}
     summernote_fields = ('content',)
 
 
