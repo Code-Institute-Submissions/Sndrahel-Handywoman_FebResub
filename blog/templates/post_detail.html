@@ -4,8 +4,12 @@
 
 {% load crispy_forms_tags %}
 
+
 <div class="page-section bg-light" id="blog">
     <div class="container">
+
+        {% include "messages.html" %}
+        
         <div class="row g-0">
             <div class="col-md-6 blog-masthead-text">
                 
@@ -34,26 +38,22 @@
                     <div class="row">
                         <div class="col-1">
                             <strong>
-                                {% if request.user.is_autheticated %}
-                                <form class="d-inline" action="{% url 'like_post' post.id %}" method="POST">
-                                    {% csrf_token %}
-                                    {% if liked %}
-                                    <button type="submit" name="blogpost_id" value="{{post.id}}" class="btn-likes"><i
-                                            class="fas fa-heart"></i></button>
+                                <a href="{% url 'like_post' post.id %}">
+                                    {% if request.user.is_authenticated %}
+                                        {% if liked %}
+                                        <i class="fas fa-heart"></i>
+                                        {% else %}
+                                        <i class="far fa-heart"></i>
+                                        {% endif %}
                                     {% else %}
-                                    <button type="submit" name="blogpost_id" value="{{post.id}}" class="btn-likes"><i
-                                            class="far fa-heart"></i></button>
+                                    <i class="fas fa-heart"></i>
                                     {% endif %}
-                                </form>
-                                {% else %}
-                                <span class="text-secondary btn-likes"><i class="far fa-heart"></i></span>
-                                {% endif %}
-                                <span class="text-secondary"> {{ post.like_count }}</span>
+                                </a> 
                             </strong>
                         </div>
                         <div class="col-1">
                             {% with comments.count as total_comments %}
-                            <strong class="text-secondary"><i class="far fa-comments"></i>
+                            <strong><i class="far fa-comments"></i>
                                 {{ total_comments }}</strong>
                             {% endwith %}
                         </div>

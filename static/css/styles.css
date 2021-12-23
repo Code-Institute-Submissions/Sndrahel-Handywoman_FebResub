@@ -5611,6 +5611,7 @@ fieldset:disabled .btn {
     margin-bottom: 1rem;
     border: 1px solid transparent;
     border-radius: 0.25rem;
+    z-index: 1;
 }
 
 .alert-heading {
