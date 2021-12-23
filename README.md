@@ -65,12 +65,12 @@ Based on the requirements of achieving user's and owner's goals and stories, bel
 4 | Site User | view services details | see description and ask for a qoute
 5 | Site User | read blog post about news and tips | get new ideas and get inspired
 6 | Site User | like and comment on posts | share experience and be part of the community
-7 | Site User | register an account | comment and share experience
+7 | Site User | sign up as a member | comment and share experience
 8 | Site User | contact the aministrator of the site | get more information
-9 | Site User | get a quotation for service | get information about costs or other information
+9 | Site User | get a quotation for service | get information about costs or ask other questions
 10 | Administrator | have access to all the functionalities available as a simple user | controll the site and its content
 11 | Administrator | add new content | keep the site up to date
-12 | Administrator | create, read, update and delete content | manage my site content
+12 | Administrator | create, read, update and delete blog actions | manage my site content
 13 | Administrator | approve or disapprove comments| filter out objectionable comments
 
 <br>
@@ -292,6 +292,114 @@ The blog management are only accessible to the admin of the website. The admin m
 
 <br>
 
+## Testing User Stories (UX Section):
+
+
+1. Goal: As a Site User, I want to be able to find responsive, rich media, with a simple navbar so that I can have a nice user experience.
+
+    Expected: When the user accesses the website they should be presented with a landing page that presents the main ideas behind the website as well as highlight the most important links.
+
+    Result: The website is designed to be clean and straight to the point. Navigation bar enables the user to visit different pages on the website with ease. Action buttons link to relevant page, content and functions.
+
+<br>
+
+2. Goal: As a Site User, I want to be able to easily navigate through the website so that I can understand what this website provide.
+
+    Expected: When the user accesses the website there should be a visible navigation structure and a consistent UX design.
+
+    Result: Reaching the landing page the user is presented with a big representive hero image. The landing page contains two sections with information and action buttons linking to the service page and about page. There´s also a testimonial snippet with reviews from users of the site.
+
+<br>
+
+3. Goal: As a Site User, I want to be able to view a list of services so that I can select one to that suits.
+
+    Expected: The user should be able to view all the services available at once.
+
+    Result: The user can navigate to the service page. The service page will be populated with all of the services present.
+
+<br>
+
+4. Goal: As a Site User, I want to be able to view services details so that I can see description and ask for a qoute.
+
+    Expected: The user should be able to click on a service card to be brought to the specific service details page, where more details about the service will be available.
+
+    Result: When clicking a service, a detailed view of the specific service is shown with more information and ther´s a action button that links to a contact form.
+
+<br>
+
+5. Goal: As a Site User, I want to be able to read blog post about news and tips so that I can get new ideas and get inspired.
+
+    Expected:
+
+    Result: The user is able to access the blog via the blog link in the top navbar. Once on the blog page, the user is then able to view individual posts by clicking on the "Read More" call-to-action button.
+
+<br>
+
+6. Goal: As a Site User, I want to be able to like and comment on posts so that I can share experience and be part of the community.
+
+    Expected: From the blog page, the user should be able to engage and comment on any of the posts.
+
+    Result: From the blog page, the user can comment on posts if they are logged in. There´s a textarea input field with a clear and submit button. If the user enters a comment in the field and selects the submit button a messege will appear that the comment first has to be approved by the admin.
+
+<br>
+
+7. Goal: As a Site User, I want to be able to sign up as a member so that I can comment and share experience.
+
+    Expected: The user should be able to sign up a membership to provide more access to certain aspects of the website.
+
+    Result: The user can select the sign up link on the navbar. Upon navigating to the page the user can fill in the form to submit and create a membership.
+
+<br>
+
+8. Goal: As a Site User, I want to be able to contact the aministrator of the site so that I can get more information.
+
+    Expected: The user should be able to click on the contact link in the navbar to be directed to the about page, where more information is provided.
+
+    Result: The user can click on the contact link present in the navbar to be navigated to the About page. When on the about page the user is presented with three posts of information about the company's actions.
+
+<br>
+
+9. Goal: As a Site User, I want to be able to get a quotation for service so that I can get information about costs or ask other questions.
+
+    Expected: The user should be able to click on the contact link in the navbar to be directed to the contact form.
+
+    Result: The user is able through the navbar and other direct links to get to the contact page/form.
+
+
+<br>
+
+10. Goal: As a Administrator, I want to be able to have access to all the functionalities available as a simple user so that I can controll the site and its content.
+
+    Expected:  The site owner should be able to have access to all the functionalities available as a simple user to controll the site and its content.
+
+    Result: The admin can do exactly the same things as simple user.
+
+<br>
+
+11. Goal: As a Administrator, I want to be able to add new content so that I can keep the site up to date.
+
+    Expected: While signed in as a admin, the admin should be able to add new content directly from the site. 
+
+    Result: While signed in as a admin, the admin is able to add new content to the blog directly from the site. Other content needs to be added from the database.
+
+<br>
+
+12. Goal: As a Administrator, I want to be able to create, read, update and delete blog actions so that I can manage my site content.
+
+    Expected: While signed in as an admin, the admin should be able to add/edit and delete a blog post directly in the blog page.
+
+    Result: While on the blog page the admin can choose to add / edit or delete posts.
+
+<br>
+
+13. Goal: As a Administrator, I want to be able to approve or disapprove comments so that I can filter out objectionable comments.
+
+    Expected: While signed in as a admin, the admin should be able to approve or delete any comment on the blog.
+
+    Result: From the admin site, the admin must approve the comment from the database before its posted to the blog.
+
+<br>
+
 
 ### This project was tested with the following browsers: 
 - Laptop MacOS Big Sur (ver 11.4): Google Chrome
@@ -302,11 +410,11 @@ The blog management are only accessible to the admin of the website. The admin m
 
 - Manually testing via Devtools 
 - Non-logged in user attempting to access content (refused)
-- All buttons and links tested
-- Users availing of the like button
-- Image uploads tested - large, incorrect format etc. 
-- Form tested with correct and incorrect detail 
-- Clear user experience & navigation
+- All buttons and links tested - works
+- Users availing of the like button - works
+- Image uploads tested - works as admin
+- Form tested with correct and incorrect detail - works
+- Clear user experience & navigation 
 - Picture loading speed
 - Login/register/logout functionalities
 - Edit, add, delete items & posts functionalities
@@ -316,11 +424,12 @@ The blog management are only accessible to the admin of the website. The admin m
 
 ### Issues / Unfixed Bugs:
 
-- Like button not working properly with hovering as well as counting likes - not fixed 
-- Testimonial carousell indicators doesnt float within the testimonial card on smaller devices - not fixed
-- When running CSS validator there is alot of warnings depending on the full bootstrap theme choosen.
-- I had issues with making the contact post - fixed.
-- All through I had many issues to make it work as I planned for in the beginning. The main reason for that depends on that I choosed to go with a template instead of doing it all by my self from scratch. I discoverd during the way that it took me much more time to try to change the prewritten scripts then it would have done if I just started from scratch. Al though it has been a good experience with alot of lessons.
+- Like button not working properly with hovering as well as counting likes - Fixed 
+- Amount of comments from the blog page is not shown - Not fixed
+- Testimonial carousell indicators doesnt float within the testimonial card on smaller devices - Indicators removed - carousell fixed
+- When running CSS validator there is alot of warnings depending on the full bootstrap theme choosen. - Not fixed
+- I had issues with making the contact post - Fixed.
+- All through I had many issues to make it work as I planned for in the beginning. The main reason for that depends on that I choosed to go with a template instead of doing it all by my self from scratch. I discoverd during the way that it took me much more time to try to change the prewritten scripts then it would have done if I just started from scratch. All though it has been a good experience with alot of lessons.
 
 
 ---
@@ -388,6 +497,7 @@ The website of this project requires back-end technologies such as server, appli
 - [Startbootstrap](https://startbootstrap.com/) - Core template layout contact form taken from this site.
 - [Stack Overflow](https://stackoverflow.com/) - Was used to find solutions and debugging.
 - [GitHub](https://github.com/Toto-Kotaro-Tanaka/ms4-eagle-golf) - Inspiration of structure for this README file were adapted from this site. 
+- [GitHub](https://github.com/zackgithuboriginal/trestore-milestone-project-4) - Inspiration of structure for this README file and testing layout were adapted from this site. 
 - [GitHub](https://github.com/rodrigoneumann/photographer-ms4) - Inspiration of structure and contactforms were adapted from this site. 
 - [GitHub](https://github.com/ZahraSadiq/Milestone4-PosterBay) - Inspiration of layout for main site were adapted from this site.
  
