@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<section class="page-section bg-light" id="services">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Law</h2>
+        </div>
+
+        <!-- Alert Messages  -->
+        {% include "messages.html" %}
+        <!-- End Alert Messages  -->
+
+        <div class="row text-center">
+
+            <!-- Section below taken from: https://mdbootstrap.com/snippets/standard/mdbootstrap/2515504 -->
+            <div class="col-lg-12 mb-4">
+                <div class="card" id="construction-card">
+                    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                        <img src="https://res.cloudinary.com/mindthelights/image/upload/v1631060129/businesswoman-leader-modern-office-with-businesspeople-workin_tyuu52.jpg"
+                            alt="picture" class="img-fluid" />
+                        <a href="#!">
+                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            Specialist in construction, design, supply and installation. Interested in our services? We are here to help you!
+                            We want to know your needs precisely to be able to provide the perfect solution. Describe your requests to us and we will do our best to help you.
+                        </p>
+                        <a href="{% url 'contact' %}" class="btn btn-black">Get a qoute</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
