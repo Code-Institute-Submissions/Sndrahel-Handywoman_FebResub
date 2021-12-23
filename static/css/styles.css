@@ -12293,7 +12293,6 @@ fieldset:disabled .btn {
     border: none;
 }
 
-/* Blog */
 
 .btn-signup {
     background-color: #23BBBB;
@@ -12340,28 +12339,22 @@ fieldset:disabled .btn {
     text-transform: uppercase;
 }
 
-.btn-like {
-    color: #E84610;
-    border: none;
-    background: transparent;
-}
-
-.btn-like:hover,
-.btn-like:active {
-    color: #E84610;
-    background: transparent;
-    border: none;
-}
-
-@media only screen and (max-width: 1200px) and (min-width: 770px) {
+@media only screen and (max-width: 1200px) and (min-width: 768px) {
     .image-flash {
         top: 35%;
     }
 }
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 768px) {
     .image-flash {
         position: inherit;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    input,
+    textarea  {
+        width: 90%;
     }
 }
 
@@ -12390,6 +12383,12 @@ fieldset:disabled .btn {
     font-size: 1rem;
     font-weight: 400;
     margin-bottom: 4rem;
+}
+
+@media screen and (max-width: 900px) {
+    .page-section .section-heading, .page-section .section-heading.h2 {
+        font-size: 1.5rem;
+    }
 }
 
 /* Buttons */
