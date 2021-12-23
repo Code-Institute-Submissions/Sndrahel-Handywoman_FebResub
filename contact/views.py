@@ -37,7 +37,7 @@ def contact(request):
                 + "\n\nMessage: "
                 + message,
                 email,
-                ["moscanders@gmail.com"],
+                ["mocsanders@gmail.com"],
                 fail_silently=False,
             )
             messages.success(
