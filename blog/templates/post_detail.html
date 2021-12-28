@@ -1,4 +1,4 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %}
 
 {% block content %}
 
@@ -9,24 +9,24 @@
     <div class="container">
 
         {% include "messages.html" %}
-        
+
         <div class="row g-0">
             <div class="col-md-6 blog-masthead-text">
-                
+
                 <!-- Code below taken from Code Institute Blog tutorial -->
                 <h1 class="post-title">{{ post.title }}</h1>
                 <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
             </div>
             <div class="d-none d-md-block col-md-6 blog-masthead-image">
                 {% if "placeholder" in post.featured_image.url %}
-                <img src="https://res.cloudinary.com/mindthelights/image/upload/c_scale,w_800/v1630174759/hammer-1629587_1920_bhedjp.jpg" alt="picture" width="100%">
+                <img src="https://res.cloudinary.com/mindthelights/image/upload/c_scale,w_800/v1630174759/hammer-1629587_1920_bhedjp.jpg"
+                    alt="picture" width="100%">
                 {% else %}
                 <img src=" {{ post.featured_image.url }}" width="100%">
                 {% endif %}
             </div>
         </div>
     </div>
-
 
     <div class="container">
         <div class="row">
@@ -40,15 +40,15 @@
                             <strong>
                                 <a href="{% url 'like_post' post.id %}">
                                     {% if request.user.is_authenticated %}
-                                        {% if liked %}
-                                        <i class="fas fa-heart"></i>
-                                        {% else %}
-                                        <i class="far fa-heart"></i>
-                                        {% endif %}
+                                    {% if liked %}
+                                    <i class="fas fa-heart"></i>
+                                    {% else %}
+                                    <i class="far fa-heart"></i>
+                                    {% endif %}
                                     {% else %}
                                     <i class="fas fa-heart"></i>
                                     {% endif %}
-                                </a> 
+                                </a>
                             </strong>
                         </div>
                         <div class="col-1">
@@ -59,11 +59,11 @@
                         </div>
                     </div>
                     {% if request.user.is_superuser %}
-                        <small class="ml-3 text-center">
-                            <a href="{% url 'edit_post' post.id %}">Edit</a> | 
-                            <a href="{% url 'delete_post' post.id %}" class="text-danger">Delete</a>
-                            <a href="{% url 'add_post' %}">Add your blog post</a>
-                        </small>
+                    <small class="ml-3 text-center">
+                        <a href="{% url 'edit_post' post.id %}">Edit</a> |
+                        <a href="{% url 'delete_post' post.id %}" class="text-danger">Delete</a>
+                        <a href="{% url 'add_post' %}">Add your blog post</a>
+                    </small>
                     {% endif %}
                 </div>
             </div>
@@ -77,11 +77,9 @@
             <div class="col-md-8 card mb-4  mt-3 ">
                 <h3>Comments:</h3>
                 <div class="card-body">
-                    <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
                     {% for comment in comments %}
                     <div class="comments" style="padding: 10px;">
                         <p class="font-weight-bold">
-                            <!-- The commenter's name goes here. -->
                             {{ comment.user }}
                             <span class=" text-muted font-weight-normal">
                                 {{ comment.created_on }}

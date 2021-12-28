@@ -43,10 +43,10 @@
                                     <div class="col-sm-12">
                                         <p class="card-text text-muted h6">{{ post.created_on}} | <i
                                                 class="far fa-heart"></i> {{ post.like_count }} |
-                                                {% with comments.count as total_comments %}
-                                                <strong><i class="far fa-comments"></i>
-                                                    {{ total_comments }}</strong>
-                                                {% endwith %}</p>
+                                            {% with comments.count as total_comments %}
+                                            <strong><i class="far fa-comments"></i>
+                                                {{ total_comments }}</strong>
+                                            {% endwith %}</p>
                                     </div>
                                 </div>
                                 <p class="card-text">{{post.content|slice:":200" }}</p>
@@ -54,11 +54,11 @@
                             </div>
                             <!-- Only display update/delete links if user is superuser -->
                             {% if request.user.is_superuser %}
-                                <small class="ml-3 text-center">
-                                    <a href="{% url 'edit_post' post.id %}">Edit</a> | 
-                                    <a href="{% url 'delete_post' post.id %}" class="text-danger">Delete</a> |
-                                    <a href="{% url 'add_post' %}">Add your blog post</a>
-                                </small>
+                            <small class="ml-3 text-center">
+                                <a href="{% url 'edit_post' post.id %}">Edit</a> |
+                                <a href="{% url 'delete_post' post.id %}" class="text-danger">Delete</a> |
+                                <a href="{% url 'add_post' %}">Add your blog post</a>
+                            </small>
                             {% endif %}
                         </div>
                         {% endfor %}
