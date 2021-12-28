@@ -285,10 +285,15 @@ The blog management are only accessible to the admin of the website. The admin m
 # Testing:
 
 ## Validator Testing:
-- [W3C Markup Validation Service](https://validator.w3.org/) - For testing HTML code
+- [W3C Markup Validation Service](https://validator.w3.org/) - For testing HTML code.
+    - No errors.
 - [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) - For testing CSS code
 - [PEP8 Online](http://pep8online.com/) - For checking Python PEP8 requirements. 
-- [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) - For testing, style checking and debugging
+    - No errors.
+- [JSHint](https://jshint.com/) - For checking Javascript code.
+    - No errors. 
+    - 2 warnings were ignored: 'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+- [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) - For testing, style checking and debugging.
 
 <br>
 
@@ -414,10 +419,12 @@ The blog management are only accessible to the admin of the website. The admin m
 - Users availing of the like button - works
 - Image uploads tested - works as admin
 - Form tested with correct and incorrect detail - works
-- Clear user experience & navigation 
+- Clear user experience & navigation - works
 - Picture loading speed
-- Login/register/logout functionalities
-- Edit, add, delete items & posts functionalities
+- Login/register/logout functionalities - works
+- Alert messeges shown when logged in/out - works
+- Alert messeges shown when a non logged in user trying to like a blog post  - works
+- Edit, add, delete items & posts functionalities - works when logged in
 - bugs or disabled links
 
 <br>
