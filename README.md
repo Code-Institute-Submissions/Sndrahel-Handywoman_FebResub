@@ -286,6 +286,7 @@ The blog management are only accessible to the admin of the website. The admin m
 
 ## Testing User Stories (UX Section):
 
+<br>
 
 1. Goal: As a Site User, I want to be able to find responsive, rich media, with a simple navbar so that I can have a nice user experience.
 
@@ -393,44 +394,80 @@ The blog management are only accessible to the admin of the website. The admin m
 <br>
 
 ## Automated Testing:
+
+ <br>
+
 - [W3C Markup Validation Service](https://validator.w3.org/) - For testing HTML code.
+    
+    <details>
+    <summary>Click to see result</summary>
+    <img src="media/wc3_html.png" alt="HTML results" width="50%" height="50%">
+    </details>
+
     - No errors.
+
+    <br>
+
 - [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) - For testing CSS code.
-    - 1 error: 
-- [PEP8 Online](http://pep8online.com/) - For checking Python PEP8 requirements. 
+
+    <details>
+    <summary>Click to see result</summary>
+    <img src="media/wc3_css.png" alt="HTML results" width="50%" height="50%">
+    </details>
+
     - No errors.
+    - When running CSS validator there is alot of warnings (ignored) depending on the full bootstrap theme choosen. 
+
+    <br>
+    
+- [PEP8 Online](http://pep8online.com/) - For checking Python PEP8 requirements. 
+   
+    - No errors.
+
+    <br>
+
 - [JSHint](https://jshint.com/) - For checking Javascript code.
+
+    <details>
+    <summary>Click to see result</summary>
+    <img src="media/jshint.png" alt="HTML results" width="50%" height="50%">
+    </details>
+   
     - No errors. 
-    - 2 warnings were ignored: 'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
-- [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) - For testing, style checking and debugging.
+    - 2 warnings: 'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz). Theese warnings are ignored at this stage.
+
+    <br>
+
+- [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) 
+    - For testing the site through out with different responsive media frames.  
+    - For style checking and debugging.
+    - For testing performance with Lighthouse.
 
 <br>
 
 
 ## Manual Testing:
 
-### This project was tested with the following browsers: 
+### This project was tested with the following external browsers: 
 - Laptop MacOS Big Sur (ver 11.4): Google Chrome
 - Mobile OnePlus Pro 9: Google Chrome
 
 <br>
 
 ### The following steps were taken:
-All links, required fields, buttons, sorting function, carousel, forms, blog posts, all drop-down menus, product display, product detail and search bar work as expected.
 
 - Manually testing via Devtools 
 - Non-logged in user attempting to access content (refused)
 - All buttons and links tested - works
 - Users availing of the like button - works
 - Image uploads tested - works as admin
-- Form tested with correct and incorrect detail - works
+- Contact form tested - works
 - Clear user experience & navigation - works
-- Picture loading speed
 - Login/register/logout functionalities - works
 - Alert messeges shown when logged in/out - works
 - Alert messeges shown when a non logged in user trying to like a blog post  - works
-- Edit, add, delete items & posts functionalities - works when logged in
-- bugs or disabled links
+- Edit, add, delete items & posts functionalities - works when logged in.
+- bugs or disabled links.
 
 <br>
 
