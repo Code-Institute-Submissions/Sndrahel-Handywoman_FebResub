@@ -284,19 +284,6 @@ The blog management are only accessible to the admin of the website. The admin m
 ---  
 # Testing:
 
-## Validator Testing:
-- [W3C Markup Validation Service](https://validator.w3.org/) - For testing HTML code.
-    - No errors.
-- [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) - For testing CSS code
-- [PEP8 Online](http://pep8online.com/) - For checking Python PEP8 requirements. 
-    - No errors.
-- [JSHint](https://jshint.com/) - For checking Javascript code.
-    - No errors. 
-    - 2 warnings were ignored: 'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
-- [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) - For testing, style checking and debugging.
-
-<br>
-
 ## Testing User Stories (UX Section):
 
 
@@ -405,13 +392,30 @@ The blog management are only accessible to the admin of the website. The admin m
 
 <br>
 
+## Automated Testing:
+- [W3C Markup Validation Service](https://validator.w3.org/) - For testing HTML code.
+    - No errors.
+- [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) - For testing CSS code
+- [PEP8 Online](http://pep8online.com/) - For checking Python PEP8 requirements. 
+    - No errors.
+- [JSHint](https://jshint.com/) - For checking Javascript code.
+    - No errors. 
+    - 2 warnings were ignored: 'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+- [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) - For testing, style checking and debugging.
+
+<br>
+
+
+## Manual Testing:
 
 ### This project was tested with the following browsers: 
 - Laptop MacOS Big Sur (ver 11.4): Google Chrome
+- Mobile OnePlus Pro 9: Google Chrome
 
 <br>
 
 ### The following steps were taken:
+All links, required fields, buttons, sorting function, carousel, forms, blog posts, all drop-down menus, product display, product detail and search bar work as expected.
 
 - Manually testing via Devtools 
 - Non-logged in user attempting to access content (refused)
