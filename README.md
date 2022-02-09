@@ -114,21 +114,6 @@ PostgreSQL was used when deployed through Heroku. The Data Model below was creat
 | Created On      | created_on     | DateTimeField       | auto_now_add=True,                                                           |
 | Approved        | approved       | BooleanField        | default=False                                                                |
 
-<br>
-
-### Contact App
-
-<br>
-
-#### Contact Model
-
-| Name            | Database Key   | Field Type          | Validation                                                                   |
-| --------------- | -------------- | --------------------| -----------------------------------------------------------------------------|
-| Name            | name           | CharField           | required=True, max_length=90                                                 | 
-| Email           | email          | EmailField          | required=True                                                                |
-| Subject         | subject        | CharField           | required=True, max_length=40                                                 |
-| Handy Service   | handyService   | MultipleChoiceField | required=True,widget=forms.CheckboxSelectMultiple,choices=HANDY_SERVICES,    |
-| Message         | message        | CharField           | required=True, widget=forms.Textarea(attrs={"rows":4))                       |
 
 <br>
 
@@ -477,7 +462,7 @@ The blog management are only accessible to the admin of the website. The admin m
 - Amount of comments from the blog page is not shown - Not fixed
 - Testimonial carousell indicators doesnt float within the testimonial card on smaller devices - Indicators removed - carousell fixed
 - When running CSS validator there is alot of warnings depending on the full bootstrap theme choosen. - Not fixed
-- I had issues with making the contact post - Fixed.
+- I had issues with making the contact form post due to Internal server error - Fixed.
 - All through I had many issues to make it work as I planned for in the beginning. The main reason for that depends on that I choosed to go with a template instead of doing it all by my self from scratch. I discoverd during the way that it took me much more time to try to change the prewritten scripts then it would have done if I just started from scratch. All though it has been a good experience with alot of lessons.
 
 
