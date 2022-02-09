@@ -40,15 +40,16 @@
                             <strong>
                                 <a href="{% url 'like_post' post.id %}">
                                     {% if request.user.is_authenticated %}
-                                    {% if liked %}
-                                    <i class="fas fa-heart"></i>
-                                    {% else %}
-                                    <i class="far fa-heart"></i>
-                                    {% endif %}
+                                        {% if liked %}
+                                        <i class="fas fa-heart"></i>
+                                        {% else %}
+                                        <i class="far fa-heart"></i>
+                                        {% endif %}
                                     {% else %}
                                     <i class="fas fa-heart"></i>
                                     {% endif %}
                                 </a>
+                                {{ post.like_count }}
                             </strong>
                         </div>
                         <div class="col-1">

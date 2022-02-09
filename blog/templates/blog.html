@@ -4,6 +4,8 @@
 
 {% block content %}
 
+{% load crispy_forms_tags %}
+
 <section class="page-section bg-light" id="blog">
     <div class="container">
         <div class="overlay"></div>
@@ -46,7 +48,8 @@
                                             {% with comments.count as total_comments %}
                                             <strong><i class="far fa-comments"></i>
                                                 {{ total_comments }}</strong>
-                                            {% endwith %}</p>
+                                            {% endwith %}
+                                        </p>
                                     </div>
                                 </div>
                                 <p class="card-text">{{post.content|slice:":200" }}</p>
