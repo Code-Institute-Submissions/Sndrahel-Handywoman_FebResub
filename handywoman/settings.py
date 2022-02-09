@@ -153,12 +153,14 @@ USE_L10N = True
 USE_TZ = True
 
 # Email configuration
-EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
-EMAIL_HOST = "smtp.sendgrid.net"
+# EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_BACKEND = "sgbackend.SendGridBackend"
+EMAIL_HOST = 'smtp.sendgrid.net'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
-EMAIL_HOST_USER = "apikey"
-SENDGRID_API_KEY = os.environ.get("SENDGRID_API_KEY")
+EMAIL_HOST_USER = 'apikey'
+EMAIL_HOST_PASSWORD = os.environ.get('SENDGRID_API_KEY')
 
 
 # Static files (CSS, JavaScript, Images)
